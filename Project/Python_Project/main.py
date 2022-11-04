@@ -4,7 +4,8 @@ from network import network
 import csv
 
 x ,y = [],[]
-
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(device)
 with open("Bitcoin Price (USD).csv") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=';')
     next(csv_reader)
@@ -55,6 +56,9 @@ data_loader_test = torch.utils.data.DataLoader(
 
 network = network(8,256,256)
 
+network = network.to(device)
+
+
 optimizer = torch.optim.Adam(network.parameters(), lr=3e-4)
 
 criterion = torch.nn.MSELoss()
@@ -63,6 +67,8 @@ for epoch in range(100):
     train_loss = 0
     val_loss = 0
     for x,y in data_loader_train:
+        x = x.to(device)
+        y = y.to(device)
         optimizer.zero_grad() #reset gráfico do gradiente
         y_pred = network(x) #previsão da rede para este x
         loss = criterion(y,y_pred) #diferença entre o que devia ter previsto e o que rede preveu 
@@ -71,7 +77,9 @@ for epoch in range(100):
 
         train_loss += loss.item()
     
-    for x,y in data_loader_val:       
+    for x,y in data_loader_val: 
+        x = x.to(device)
+        y = y.to(device)      
         y_pred = network(x)
         loss = criterion(y,y_pred)
         
@@ -85,7 +93,8 @@ for epoch in range(100):
 
 test_loss = 0
 for x,y in data_loader_test:
-           
+    x = x.to(device)
+    y = y.to(device)       
     y_pred = network(x)
     loss = criterion(y,y_pred)
 
@@ -105,4 +114,3 @@ passar à rede que devolver entre -1 e 1 || network.load_state_dict("network.tar
 desnomalizar esse valor
 
 """
-        

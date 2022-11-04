@@ -21,4 +21,3 @@ class network(nn.Module):
 
         return x
 
-    
