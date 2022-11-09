@@ -30,7 +30,7 @@ test_y = y[int(N*0.9):]
 """
 train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.2, random_state=0)
 
-train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.1, random_state=0) 
+train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.1, random_state=0)
 
 trainset = BitcoinRegressionDataset(train_x,train_y) #matriz com dados normalizados
 

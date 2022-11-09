@@ -9,7 +9,7 @@ class BitcoinRegressionDataset(Dataset): #Recebe o Dataset do main
         self.x, self.y = x,y # => guardar x e y
 
         
-        """
+        
         
         x = np.array(self.x) #Mete o train_x no array 
         y = np.array(self.y)
@@ -29,7 +29,7 @@ class BitcoinRegressionDataset(Dataset): #Recebe o Dataset do main
         print(x_min)
         print(y_min)
         
-        """
+        
         
         # valores máximos e mínimos das colunas dos atributos para normalizar os valores
         self.x_max=torch.Tensor([6.48000000e+04, 6.48540000e+04 ,6.46851700e+04 ,1.86693905e+03,1.04698422e+08 ,2.91640000e+04 ,1.17949386e+03 ,5.56839455e+07])
