@@ -1,0 +1,5 @@
+
+https://towardsdatascience.com/visualizing-artificial-neural-networks-anns-with-just-one-line-of-code-b4233607209e
+
+
+https://github.com/ISosnovik/nn4topopt
