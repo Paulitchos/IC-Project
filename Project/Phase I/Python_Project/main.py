@@ -3,6 +3,11 @@ from sklearn.model_selection import train_test_split
 from dataset import BitcoinRegressionDataset
 from network import network
 import csv
+import keras
+from keras.models import Sequential
+from keras.layers import Dense
+from ann_visualizer.visualize import ann_viz
+import numpy
 
 x ,y = [],[]
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -33,6 +38,7 @@ train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.2, random_
 train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.1, random_state=0)
 
 trainset = BitcoinRegressionDataset(train_x,train_y) #matriz com dados normalizados
+
 
 data_loader_train = torch.utils.data.DataLoader( #Otimizar a maneira como le as coisas
     trainset,
@@ -71,7 +77,7 @@ optimizer = torch.optim.Adam(network.parameters(), lr=3e-4) #lr = learning rate,
 
 criterion = torch.nn.MSELoss() #função de treino 
 
-for epoch in range(100):
+for epoch in range(3):
     train_loss = 0
     val_loss = 0
     for x,y in data_loader_train:
