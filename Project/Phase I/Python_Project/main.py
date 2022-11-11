@@ -4,11 +4,8 @@ from dataset import BitcoinRegressionDataset
 from dataset import BitcoinRegressionDataset_train
 from network import network
 import csv
-#import keras
-#from keras.models import Sequential
-#from keras.layers import Dense
-#from ann_visualizer.visualize import ann_viz
 import numpy
+from dataset import max_min
 
 x ,y = [],[]
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -38,12 +35,9 @@ train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.2, random_
 
 train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.1, random_state=0)
 
-trainset = BitcoinRegressionDataset_train(train_x,train_y) #matriz com dados normalizados
+x_max,x_min,y_max,y_min = max_min(train_x,train_y)
 
-x_max = trainset.x_max
-x_min = trainset.x_min
-y_max = trainset.y_max
-y_min = trainset.y_min
+trainset = BitcoinRegressionDataset_train(train_x,train_y,x_max,x_min,y_max,y_min) #matriz com dados normalizados
 
 data_loader_train = torch.utils.data.DataLoader( #Otimizar a maneira como le as coisas
     trainset,
@@ -125,11 +119,3 @@ print(f"Test loss = {test_loss}")
         
 torch.save(network.state_dict(), "network_1.tar")
 
-
-"""
-
-passar à rede que devolver entre -1 e 1 || network.load_state_dict("network.tar") preço=network()
-
-desnomalizar esse valor
-
-"""
