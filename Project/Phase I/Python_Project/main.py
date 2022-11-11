@@ -1,12 +1,13 @@
 import torch
 from sklearn.model_selection import train_test_split
 from dataset import BitcoinRegressionDataset
+from dataset import BitcoinRegressionDataset_train
 from network import network
 import csv
-import keras
-from keras.models import Sequential
-from keras.layers import Dense
-from ann_visualizer.visualize import ann_viz
+#import keras
+#from keras.models import Sequential
+#from keras.layers import Dense
+#from ann_visualizer.visualize import ann_viz
 import numpy
 
 x ,y = [],[]
@@ -37,8 +38,12 @@ train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.2, random_
 
 train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.1, random_state=0)
 
-trainset = BitcoinRegressionDataset(train_x,train_y) #matriz com dados normalizados
+trainset = BitcoinRegressionDataset_train(train_x,train_y) #matriz com dados normalizados
 
+x_max = trainset.x_max
+x_min = trainset.x_min
+y_max = trainset.y_max
+y_min = trainset.y_min
 
 data_loader_train = torch.utils.data.DataLoader( #Otimizar a maneira como le as coisas
     trainset,
@@ -48,7 +53,7 @@ data_loader_train = torch.utils.data.DataLoader( #Otimizar a maneira como le as 
     num_workers=8,
 )
 
-valset = BitcoinRegressionDataset(val_x,val_y) #matriz com os dados de validacao
+valset = BitcoinRegressionDataset(val_x,val_y,x_max,x_min,y_max,y_min) #matriz com os dados de validacao
 
 data_loader_val = torch.utils.data.DataLoader(
     valset,
@@ -58,7 +63,7 @@ data_loader_val = torch.utils.data.DataLoader(
     num_workers=8,
 )
 
-testset = BitcoinRegressionDataset(test_x,test_y) #matrix com dados para tete
+testset = BitcoinRegressionDataset(test_x,test_y,x_max,x_min,y_max,y_min) #matrix com dados para teste
 
 data_loader_test = torch.utils.data.DataLoader(
     testset,
@@ -118,7 +123,7 @@ test_loss = test_loss / len(test_y)
 
 print(f"Test loss = {test_loss}")
         
-torch.save(network.state_dict(), "network.tar")
+torch.save(network.state_dict(), "network_1.tar")
 
 
 """
