@@ -1,0 +1,21 @@
+
+https://towardsdatascience.com/visualizing-artificial-neural-networks-anns-with-just-one-line-of-code-b4233607209e
+
+
+https://github.com/ISosnovik/nn4topopt
+
+Cap 1
+	-explicar o dataset, features ,exemplos (open time e close time tirámos)
+Cap 2
+	-Dizer qual foi a tollbox que usamos, camadas, funcoes de ativacao, algoritmos de treino
+
+Cap3
+
+
+cap4
+
+
+referencias
+	-foto do nosso dataset
+        [1] ...
+	[2] ... 
