@@ -4,8 +4,9 @@ from dataset import BitcoinRegressionDataset
 from dataset import BitcoinRegressionDataset_train
 from network import network
 import csv
-import numpy
+import numpy as np
 from dataset import max_min
+from matplotlib import pyplot as plt
 
 x ,y = [],[]
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -17,9 +18,9 @@ with open("Bitcoin Price (USD).csv") as csv_file:
         #print(row)
         y.append(float(row[4])) #saidas
         x.append([float(row[1]),float(row[2]),float(row[3]),float(row[5]),float(row[7]),float(row[8]),float(row[9]),float(row[10])]) #features que queremos (entradas)
-
-N = len(y) #Numero total de exemplos
 """
+N = len(y) #Numero total de exemplos
+
 train_x = x[:int(N*0.8)] #8 linhas, do 80% do total de colunas
 print(train_x)
 train_y = y[:int(N*0.8)]
@@ -74,9 +75,9 @@ network = network.to(device)
 
 optimizer = torch.optim.Adam(network.parameters(), lr=3e-4) #lr = learning rate, parametros para otimizar arede
 
-criterion = torch.nn.MSELoss() #função de treino 
+criterion = torch.nn.L1Loss() #função de treino 
 
-for epoch in range(3):
+for epoch in range(100):
     train_loss = 0
     val_loss = 0
     for x,y in data_loader_train:
@@ -84,7 +85,8 @@ for epoch in range(3):
         y = y.to(device)
         optimizer.zero_grad() #reset gráfico do gradiente
         y_pred = network(x) #previsão da rede para este x
-        loss = criterion(y,y_pred) #diferença entre o que devia ter previsto e o que rede preveu 
+        loss = criterion(y,y_pred)
+        #loss = torch.sqrt(criterion(y,y_pred)) #diferença entre o que devia ter previsto e o que rede preveu 
         loss.backward() #para calcular o gradiente
         optimizer.step() #atualizar os pesos
 
@@ -95,6 +97,7 @@ for epoch in range(3):
         y = y.to(device)      
         y_pred = network(x)
         loss = criterion(y,y_pred)
+        #loss = torch.sqrt(criterion(y,y_pred))
         
 
         val_loss += loss.item()
@@ -110,6 +113,7 @@ for x,y in data_loader_test:
     y = y.to(device)       
     y_pred = network(x)
     loss = criterion(y,y_pred)
+    #loss = torch.sqrt(criterion(y,y_pred))
 
     test_loss += loss.item()
 
@@ -117,5 +121,5 @@ test_loss = test_loss / len(test_y)
 
 print(f"Test loss = {test_loss}")
         
-torch.save(network.state_dict(), "network_1.tar")
+torch.save(network.state_dict(), f"network_MAE_2Lay_256_Linear_.tar")
 
