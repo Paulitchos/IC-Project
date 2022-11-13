@@ -121,9 +121,6 @@ test_loss = test_loss / len(test_y)
 
 print(f"Test loss = {test_loss}")
         
-<<<<<<< Updated upstream:Project/Phase I/Python_Project/main.py
 torch.save(network.state_dict(), f"network_MAE_2Lay_256_Linear_.tar")
-=======
 torch.save(network.state_dict(), "network.tar")
->>>>>>> Stashed changes:Project/Phase I/src/main.py
 

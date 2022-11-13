@@ -1,11 +1,11 @@
 \documentclass[10pt]{article}
 
 \usepackage[utf8]{inputenc}
-
+\usepackage{amsmath, calc, xcolor}
 \usepackage{alphabeta} 
 \usepackage[pdftex]{graphicx}
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
-
+\usepackage[]{bookmark}
 \linespread{1.06}
 \setlength{\parskip}{8pt plus2pt minus2pt}
 
@@ -91,10 +91,10 @@
 \large
 \section{Introdução}\label{sec:intro}
 Este trabalho foi realizado no âmbito da Unidade Curricular 
-de Inteligência Computacional, 
-tem por objetivo treinar uma rede neuronal capaz de estimar o valor da Bitcoin num determinado minuto.
+de Inteligência Computacional,tem por objetivo treinar uma rede 
+neuronal capaz de estimar o valor da Bitcoin num determinado minuto.
 
-\vspace{6cm}
+\vspace{4cm}
 \section{Descrição do caso de estudo e objetivos do problema}\label{sec:apre-da-org}
 O Dataset escolhido foi Bitcoin Price USD, neste conjunto de dados os dados são gerados no intervalo 
 de 1 minuto por uma API (Binance API) entre 1 de janeiro de 2021 a 12 de Maio de 2021.
@@ -103,13 +103,11 @@ Low, Close da Bitcoin em minutos específicos.
 \begin{itemize}
     \item{Features}
     \begin{enumerate}
-        \item Horário de abertura (Open Time);
         \item Preço de abertura num minuto específico (Open Price of particular minute);
         \item Preço alto num minuto específico (High Price of particular minute);
         \item Preço baixo num minuto específico (Low Price of particular minute);
         \item Fechar Preço num minuto específico (Close Price of particular minute);
         \item Volume total num minuto específico (Total volume of particular minute);
-        \item Hora de fecho (Close Time);
         \item Volume de ativos de cotação (Quote asset volume);
         \item Número de negócios para determinado minuto (Number of trades for particular minute);
         \item Volume de ativos base de compra do tomador (Taker buy base asset volume);
@@ -123,7 +121,102 @@ Como o Horário de abertura (Open Time) e o Horário de fecho (Close Time) são 
 \newpage
 \section{Descrição da implementação dos algoritmos}\label{sec:ev-da-org}
 
+Para treinar o nosso modelo optámos por usar o PyTorch que é uma biblioteca Python de aprendizagem máquina de código aberto.
+A principal diferença entre PyTorch e TensorFlow é a escolha entre simplicidade e desempenho: o PyTorch é mais fácil de aprender
+(especialmente para programadores Python), enquanto o TensorFlow tem uma curva de aprendizagem, mas tem um desempenho melhor e é mais utilizado na comunidade de desenvolvedores.
+\vspace{1cm}
+\\Os algoritmos de treino usádos foram: 
+\vspace{1cm}
+\begin{itemize}
+\item MSE (Erro quadrado médio)
+\vspace{1cm}
+\begin{equation}
+  \vspace{1cm}
+  MSE : \sum_{i=1}^{D}(x_i-y_i)^2
+\end{equation}
+\item MAE (Erro absoluto médio)
+\vspace{1cm}
+\begin{equation}
+  \vspace{1cm}
+  MAE : \sum_{i=1}^{D}|x_i-y_i|
+\end{equation}
+\item RMSE (Raíz quadrada do erro médio)
+\vspace{1cm}
+\begin{equation}
+  \vspace{1cm}
+  RMSE : \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}}
+\end{equation}
+\item RSQUARED (Coeficiente de determinação)
+\vspace{1cm}
+\begin{equation}
+  \vspace{1cm}
+\end{equation}
 \newpage
+\end{itemize}
+Funções de ativação usadas:
+\vspace{1cm}
+\begin{itemize}
+  \item Linear
+  \vspace{1cm}
+  \begin{equation}
+    \vspace{1cm}
+    Linear : xA^T + b
+  \end{equation}
+  \item AdaptiveLogSoftmaxWithLoss
+  \vspace{1cm}
+  \item RReLU
+  \begin{equation}
+    \vspace{1cm}
+    RReLU(x) =
+      \begin{cases}
+            x, & \mbox{if } x \geq \mbox{0} \\
+            ax, & \mbox{caso contrário}
+      \end{cases}
+  \end{equation}
+  \item LogSigmoid
+  \begin{equation}
+    \vspace{1cm}
+    LogSigmoid(x) =  \log(\frac{1}{1+\exp(-x)})
+  \end{equation}
+\end{itemize}
+\vspace{1cm}
+Treinámos 4 redes para testar valores:  
+\vspace{1cm}
+\begin{enumerate}
+\item Rede MSE
+  \begin{itemize}
+    \item\\Nome - network MSE 2Lay 256 Linear 8 94e 05.tar
+    \item\\Função de Treino - MSE
+    \item\\Função de Ativação - Linear
+    \item\\Nº de Neurónios - 256
+    \item\\Nº de Camadas - 2
+    \item\\Learning Rate - 3e-4
+    \item\\Erro de teste - 8,94E-05
+  \end{itemize}
+  \vspace{2cm}
+  \item \\Rede RMSE:
+  \begin{itemize}
+    \item\\Nome - network RMSE 2Lay 256 Linear 0 00228.tar
+    \item\\Função de Treino - RMSE
+    \item\\Função de Ativação - Linear
+    \item\\Nº de Neuronios - 256
+    \item\\Nº de Camadas - 2
+    \item\\Learning Rate - 3e-4
+    \item\\Erro de teste - 0,0028
+  \end{itemize}  
+  \vspace{2cm}
+  \item\\Rede MAE:
+  \begin{itemize} 
+    \item\\Nome - network MAE 2Lay 256 Linear 0 00173 .tar
+    \item\\Função de Treino - MAE
+    \item\\Função de Ativação - Linear
+    \item\\Nº de Neuronios - 256
+    \item\\Nº de Camadas - 2
+    \item\\Learning Rate - 3e-4
+    \item\\Erro de teste - 0,00173
+  \end{itemize}
+\end{enumerate}
+  \newpage
 
 \section{Análise de Resultados}\label{sec:ev-da-org}
 
