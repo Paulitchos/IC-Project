@@ -123,7 +123,7 @@ Para treinar o nosso modelo optámos por usar o PyTorch que é uma biblioteca Py
 A principal diferença entre PyTorch e TensorFlow é a escolha entre simplicidade e desempenho: o PyTorch é mais fácil de aprender
 (especialmente para programadores Python), enquanto o TensorFlow tem uma curva de aprendizagem, mas tem um desempenho melhor e é mais utilizado na comunidade de desenvolvedores.
 \vspace{1cm}
-\\Os algoritmos de treino usádos foram: 
+\\Os algoritmos de treino(métricas de avaliação) usádos foram: 
 \vspace{1cm}
 \begin{itemize}
 \item MSE (Erro quadrado médio)
@@ -229,7 +229,7 @@ A melhor rede obtida na primeira fase, alterando apenas as funções de
 treino foi a rede network MSE 2Lay 256 Tanh 8 94e 05.tar (Rede MSE) cujo a 
 função de treino foi a MSE (Erro \& quadrado \& médio).
 
-Foram criadas novas 3 redes cujo a função de treino é a função MSE pois foi
+Foram criadas novas 5 redes cujo a função de treino é a função MSE pois foi
 a função que obtivemos melhor resultados, nestas novas 3 redes irão variar vários parâmetros
 tais como a função de ativação, número de neurónios e número de camadas.
 
@@ -270,7 +270,7 @@ tais como a função de ativação, número de neurónios e número de camadas.
   \vspace{1cm}
   \item Com uma camada:
     \begin{itemize}
-      \item Nome - network MSE 1Lay 256 Tanh 9_04E 05.tar
+      \item Nome - network MSE 1Lay 256 Tanh 9 04E 05.tar
       \item Função de Treino - MSE
       \item Função de Ativação - Tanh
       \item Nº de neuronios - 256
@@ -293,13 +293,64 @@ tais como a função de ativação, número de neurónios e número de camadas.
 \newpage
 
 \section{Análise de Resultados}\label{sec:ev-da-org}
+\subsection{Diferença nas funções de ativação(métricas de avaliação)}
 
-\vspace{6cm}
-\section{Conclusões}\label{sec:an-da-info-fin-da-org}
+MSE é uma função diferenciável que facilita a execução de 
+operações matemáticas em comparação com uma função 
+não diferenciável como MAE. 
+Portanto, em muitos modelos, o RMSE é usado como métrica 
+padrão para calcular a Função de Perda, apesar de ser mais 
+difícil de interpretar do que o MAE.
+
+O menor valor de MAE, MSE e RMSE implica em maior precisão 
+de um modelo de regressão. No entanto, um valor mais alto de 
+RSquared é considerado desejável.
+
+Para comparar a precisão entre diferentes modelos de 
+regressão linear, RMSE é uma escolha melhor do que R Squared.
+
+\subsection{Diferença nas funções de ativação}
+
+Como podemos visualizar nos resultados acima, o função Tanh continua
+a ter a melhor performance, isto tudo tem haver da maneira como foram
+normalizados os dados.
+
+Os nossos dados estão normalizados entre -1 e 1, sendo que a Softmax e a Sigmoid
+limitam o output entre 0 e 1, o que não ajuda para a performance.
+Para RReLU aplica a função de unidade de revestimento 
+retificado com vazamento aleatório, elemento a elemento,
+podendo obter melhor resultados se o seu lower e upperbound
+foram bem definidos.
+
+\subsection{Diferença nas configurações da rede}
+
+Sendo um modelo linear, precisamos apenas de uma camada para
+rede, sendo que o aumento de camadas não afeta a performance da rede
+que é o que acontece nos nossos testes.
+
+Enquanto que na dimunuição da quantidade de neurónios podemos ver 
+que a nossa performance da rede piora, pois que quantos mais neurónios
+para a nossa rede melhor ela será ao custo de um aumento do tempo
+de treino.
 
 \vspace{3cm}
+\section{Conclusões}\label{sec:an-da-info-fin-da-org}
+Podemos concluir que para este caso a melhor métrica de avaliação
+é a MSE com a função de ativação adequada para a maneira como foram
+normalizados os dados.
 
-\newpage
+Ao testar com valores esta rede dá valores favoráveis, que infelizmente
+não podem ser levados para uso de ganhos financeiros no mercado
+da criptomoeda devido ao facto que a nossa rede não tem dados
+para prever fatores externos que possam causar por exemplo
+um crash no mercado.
+
+Combinamos o interesse ao tópico das criptomoedas hoje em dia, 
+para aprofundar o nossa compreenção no tópico de criar redes 
+neuronais para previsão de valores de um modelo de regressão.
+
+
+\vspace{1cm}
 
 \section{Referências}\label{sec:sup-inf-utl}
 \bibliographystyle{ieeetr}
