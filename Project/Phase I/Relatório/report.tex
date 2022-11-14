@@ -1,5 +1,6 @@
 \documentclass[10pt]{article}
 
+\PassOptionsToPackage{hidelinks}{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, calc, xcolor}
 \usepackage{alphabeta} 
@@ -14,10 +15,10 @@
 
 \newcommand{\eat}[1]{}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
 \usepackage[official]{eurosym}
 \usepackage{enumitem}
 \setlist{nolistsep,noitemsep}
+\usepackage[]{hyperref}
 \usepackage{url}
 \usepackage{cite}
 \usepackage{lipsum}
@@ -27,9 +28,7 @@
 \usepackage{xcolor,colortbl}
 \usepackage{array}
 
-
 \setlength{\parindent}{2em}
-
 \renewcommand*\contentsname{Índice}
 \renewcommand\refname{}
 
@@ -90,7 +89,7 @@
 \large
 \section{Introdução}\label{sec:intro}
 Este trabalho foi realizado no âmbito da Unidade Curricular 
-de Inteligência Computacional,tem por objetivo treinar uma rede 
+de Inteligência Computacional, tem por objetivo treinar uma rede 
 neuronal capaz de estimar o valor da Bitcoin num determinado minuto.
 
 \vspace{4cm}
@@ -118,7 +117,7 @@ Low, Close da Bitcoin em minutos específicos.
 \end{itemize}   
 Como o Horário de abertura (Open Time) e o Horário de fecho (Close Time) são sempre iguais, retirámos essas colunas das features.
 \newpage
-\section{Descrição da implementação dos algoritmos}\label{sec:ev-da-org}
+\section{Descrição da implementação dos algoritmos}\label{sec:Des-da-imp-dos-alg}
 
 Para treinar o nosso modelo optámos por usar o PyTorch que é uma biblioteca Python de aprendizagem máquina de código aberto.
 A principal diferença entre PyTorch e TensorFlow é a escolha entre simplicidade e desempenho: o PyTorch é mais fácil de aprender
@@ -149,20 +148,19 @@ A principal diferença entre PyTorch e TensorFlow é a escolha entre simplicidad
 \vspace{1cm}
 \begin{equation}
   \vspace{1cm}
+  RSQUARED : 1 - \frac{SS_{res}}{SS_{tot}}
 \end{equation}
 \newpage
 \end{itemize}
 Funções de ativação usadas:
 \vspace{1cm}
 \begin{itemize}
-  \item Linear
-  \vspace{1cm}
+  \item Softmax
   \begin{equation}
-    \vspace{1cm}
-    Linear : xA^T + b
-  \end{equation}
-  \item AdaptiveLogSoftmaxWithLoss
   \vspace{1cm}
+  Softmax(x) = \frac{\exp(x_i)}{\sum_j(x_j)}
+  \end{equation}
+  
   \item RReLU
   \begin{equation}
     \vspace{1cm}
@@ -172,21 +170,21 @@ Funções de ativação usadas:
             ax, & \mbox{caso contrário}
       \end{cases}
   \end{equation}
-  \item LogSigmoid
+  \item Sigmoid
   \begin{equation}
     \vspace{1cm}
-    LogSigmoid(x) =  \log(\frac{1}{1+\exp(-x)})
+    Sigmoid(x) =  \sigma(x) = \frac{1}{1+\exp(-x)}
   \end{equation}
 \end{itemize}
 \vspace{1cm}
-Treinámos 4 redes para testar valores:  
+Treinámos 4 redes com as diferentes funções de treino para testar qual teria menor erro:  
 \vspace{1cm}
 \begin{enumerate}
 \item Rede MSE
   \begin{itemize}
-    \item Nome - network MSE 2Lay 256 Linear 8 94e 05.tar
+    \item Nome - network MSE 2Lay 256 Tanh 8 94e 05.tar
     \item Função de Treino - MSE
-    \item Função de Ativação - Linear
+    \item Função de Ativação - Tanh
     \item Nº de Neurónios - 256
     \item Nº de Camadas - 2
     \item Learning Rate - 3e-4
@@ -195,9 +193,9 @@ Treinámos 4 redes para testar valores:
   \vspace{2cm}
   \item Rede RMSE
   \begin{itemize}
-    \item Nome - network RMSE 2Lay 256 Linear 0 00228.tar
+    \item Nome - network RMSE 2Lay 256 Tanh 0 00228.tar
     \item Função de Treino - RMSE
-    \item Função de Ativação - Linear
+    \item Função de Ativação - Tanh
     \item Nº de Neuronios - 256
     \item Nº de Camadas - 2
     \item Learning Rate - 3e-4
@@ -206,9 +204,9 @@ Treinámos 4 redes para testar valores:
   \vspace{2cm}
   \item Rede MAE
   \begin{itemize} 
-    \item Nome - network MAE 2Lay 256 Linear 0 00173 .tar
+    \item Nome - network MAE 2Lay 256 Tanh 0 00173 .tar
     \item Função de Treino - MAE
-    \item Função de Ativação - Linear
+    \item Função de Ativação - Tanh
     \item Nº de Neuronios - 256
     \item Nº de Camadas - 2
     \item Learning Rate - 3e-4
@@ -217,9 +215,9 @@ Treinámos 4 redes para testar valores:
   \vspace{2cm}
   \item Rede RSQUARED
   \begin{itemize}
-    \item Nome - network R2 2Lay 256 Linear 0 062.tar
+    \item Nome - network R2 2Lay 256 Tanh 0 062.tar
     \item Função de Treino - RSquared
-    \item Função de Ativação - Linear
+    \item Função de Ativação - Tanh
     \item Nº de Neurónios - 256
     \item Nº de Camadas - 2
     \item Learning Rate - 3e-4
@@ -228,16 +226,49 @@ Treinámos 4 redes para testar valores:
 \end{enumerate}
 \vspace{1cm}
 A melhor rede obtida na primeira fase, alterando apenas as funções de
-treino foi a rede network MSE 2Lay 256 Linear 8 94e 05.tar (Rede MSE) cujo a 
-função de treino foi a MSE (Erro & quadrado & médio).
+treino foi a rede network MSE 2Lay 256 Tanh 8 94e 05.tar (Rede MSE) cujo a 
+função de treino foi a MSE (Erro \& quadrado \& médio).
+
 Foram criadas novas 3 redes cujo a função de treino é a função MSE pois foi
 a função que obtivemos melhor resultados, nestas novas 3 redes irão variar vários parâmetros
 tais como a função de ativação, número de neurónios e número de camadas.
 
-
-
-
+\vspace{1cm}
+\begin{enumerate}
+  \item Rede MSE (Softmax para função de ativação)
+  \begin{itemize}
+    \item Nome - network MSE 2Lay 256 Softmax 0 065.tar
+    \item Função de Treino - MSE
+    \item Função de Ativação - Softmax
+    \item Nº de Neurónios - 256
+    \item Nº de Camadas - 2
+    \item Learning Rate - 3e-4
+    \item Erro de teste - 0,065
+  \end{itemize}
   \newpage
+  \item Rede MSE (RReLU para função de ativação)
+  \begin{itemize}
+    \item Nome - network MSE 2Lay 256 RReLU 0 065.tar
+    \item Função de Treino - MSE
+    \item Função de Ativação - RReLU
+    \item Nº de Neurónios - 256
+    \item Nº de Camadas - 2
+    \item Learning Rate - 3e-4
+    \item Erro de teste - 0,0019
+  \end{itemize}
+  \vspace{1cm}
+  \item Rede MSE (Sigmoid para função de ativação)
+  \begin{itemize}
+    \item Nome - network MSE 2Lay 256 RReLU 0 065.tar
+    \item Função de Treino - MSE
+    \item Função de Ativação - Sigmoid
+    \item Nº de Neurónios - 256
+    \item Nº de Camadas - 2
+    \item Learning Rate - 3e-4
+    \item Erro de teste - 0,0019
+  \end{itemize}
+\end{enumerate}
+\newpage
 
 \section{Análise de Resultados}\label{sec:ev-da-org}
 
@@ -249,7 +280,9 @@ tais como a função de ativação, número de neurónios e número de camadas.
 \newpage
 
 \section{Referências}\label{sec:sup-inf-utl}
-\cite{Binance:2021}
+\bibliographystyle{ieeetr}
+\bibliography{refs}
+\nocite{Binance_2021}
 
 %===========================================================
 

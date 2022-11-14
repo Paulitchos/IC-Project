@@ -20,9 +20,10 @@ class network(nn.Module):
         #print(self.layer[0].get_weights())
         x = self.fc2(x)
         x = self.out(x)
-        #x = torch.tanh(x)
-        x = torch.softmax(x,1) # Limitar entre -1 e 1 o output
-
+        #x = torch.tanh(x) # Limitar entre -1 e 1 o output
+        #x = torch.softmax(x,1) 
+        #x = torch.rrelu(x)
+        x= torch.sigmoid(x)
         return x
 
 
