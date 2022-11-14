@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{Binance_2021}
+\includegraphics[width=0.06\textwidth]{img/Binance.png}
+\newblock
+  \href{https://www.kaggle.com/datasets/aakashverma8900/bitcoin-price-usd}{BinanceDataset}.
+
+\bibitem{Pytorch}
+\includegraphics[width=0.06\textwidth]{img/Pytorch.png}
+\newblock \href{https://pytorch.org/docs/stable/torch.html}{Pytorch}.
+
+\bibitem{Pytorch_nn}
+\includegraphics[width=0.06\textwidth]{img/Pytorch.png}
+\newblock \href{https://pytorch.org/docs/stable/nn.html}{Pytorch.nn}.
+
+\end{thebibliography}

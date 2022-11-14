@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: report.aux
+The style file: ieeetr.bst
+Database file #1: refs.bib
+Warning--empty title in Binance_2021
+Warning--empty journal in Binance_2021
+Warning--empty year in Binance_2021
+Warning--empty title in Pytorch
+Warning--empty journal in Pytorch
+Warning--empty year in Pytorch
+Warning--empty title in Pytorch_nn
+Warning--empty journal in Pytorch_nn
+Warning--empty year in Pytorch_nn
+You've used 3 entries,
+            1876 wiz_defined-function locations,
+            488 strings with 3838 characters,
+and the built_in function-call counts, 442 in all, are:
+= -- 36
+> -- 12
+< -- 0
++ -- 6
+- -- 3
+* -- 29
+:= -- 71
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 27
+empty$ -- 52
+format.name$ -- 3
+if$ -- 97
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 15
+num.names$ -- 3
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 3
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 9
+while$ -- 3
+width$ -- 4
+write$ -- 23
+(There were 9 warnings)
