@@ -6,7 +6,7 @@ from network import network
 import csv
 import numpy as np
 from dataset import max_min
-from matplotlib import pyplot as plt
+from torchmetrics.functional import r2_score
 
 x ,y = [],[]
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -37,6 +37,7 @@ train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.2, random_
 train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.1, random_state=0)
 
 x_max,x_min,y_max,y_min = max_min(train_x,train_y)
+
 
 trainset = BitcoinRegressionDataset_train(train_x,train_y,x_max,x_min,y_max,y_min) #matriz com dados normalizados
 
@@ -72,10 +73,10 @@ network = network(8,256,256) #Número features , 2 camadas com 256 neuronios
 
 network = network.to(device)
 
-
 optimizer = torch.optim.Adam(network.parameters(), lr=3e-4) #lr = learning rate, parametros para otimizar arede
 
-criterion = torch.nn.L1Loss() #função de treino 
+criterion = torch.nn.MSELoss() #função de treino 
+#criterion = torch.nn.L1Loss() #função de treino
 
 for epoch in range(100):
     train_loss = 0
@@ -85,11 +86,10 @@ for epoch in range(100):
         y = y.to(device)
         optimizer.zero_grad() #reset gráfico do gradiente
         y_pred = network(x) #previsão da rede para este x
-        loss = criterion(y,y_pred)
-        #loss = torch.sqrt(criterion(y,y_pred)) #diferença entre o que devia ter previsto e o que rede preveu 
+        loss = criterion(y,y_pred) #diferença entre o que devia ter previsto e o que rede preveu -> MAE/MSE
+        #loss = torch.sqrt(criterion(y,y_pred)) #diferença entre o que devia ter previsto e o que rede preveu -> RMSE
         loss.backward() #para calcular o gradiente
         optimizer.step() #atualizar os pesos
-
         train_loss += loss.item()
     
     for x,y in data_loader_val: 
@@ -98,8 +98,6 @@ for epoch in range(100):
         y_pred = network(x)
         loss = criterion(y,y_pred)
         #loss = torch.sqrt(criterion(y,y_pred))
-        
-
         val_loss += loss.item()
     
     train_loss = train_loss / len(train_y)
@@ -108,19 +106,23 @@ for epoch in range(100):
     print(f"Epoch {epoch+1}/100 : Train loss = {train_loss} | Val loss = {val_loss}")
 
 test_loss = 0
+test_loss_squared = 0
 for x,y in data_loader_test:
     x = x.to(device)
     y = y.to(device)       
     y_pred = network(x)
     loss = criterion(y,y_pred)
     #loss = torch.sqrt(criterion(y,y_pred))
-
+    r_square = r2_score(y_pred, y)
     test_loss += loss.item()
+    test_loss_squared += r_square
 
 test_loss = test_loss / len(test_y)
+test_loss_squared = test_loss_squared / len(test_y)
 
 print(f"Test loss = {test_loss}")
-        
-torch.save(network.state_dict(), f"network_MAE_2Lay_256_Linear_.tar")
-torch.save(network.state_dict(), "network.tar")
+print(f"Test loss Square = {test_loss_squared}")      
+torch.save(network.state_dict(), f"network_MSE_2Lay_256_softmax_.tar")
+
+
 
