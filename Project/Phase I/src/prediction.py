@@ -25,7 +25,7 @@ prediction_values = torch.Tensor([56958.59000000,56996.57000000,56956.87000000,3
 prediction_values = ((prediction_values-x_min)/(x_max - x_min))*2 -1
 
 network = network(8,256,256)
-network.load_state_dict(torch.load("network_1.tar"))
+network.load_state_dict(torch.load("network_MAE_2Lay_256_Tanh_0_00173_.tar"))
 
 preco = network(prediction_values)
 

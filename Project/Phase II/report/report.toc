@@ -1,0 +1,14 @@
+\thispagestyle {empty}
+\contentsline {section}{\numberline {1}Introdução}{1}{section.1}%
+\contentsline {section}{\numberline {2}Em que consiste a Computação Evolucionária?}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Descrição do paradigma de computação evolucionária e possíveis aplicações no contexto de treino de uma rede neuronal}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Descrição da implementação dos algoritmos}{2}{section.3}%
+\contentsline {section}{\numberline {4}Em que consiste a Inteligência Swarm}{2}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Enquadrar a área designada de “inteligência Swarm” no domínio da Computação Evolucionária. Deve descrever sumariamente os principais paradigmas e algoritmos, em particular o algoritmo PSO.}{2}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Funcionamento do algoritmo}{2}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Descrever em detalhe o algoritmo selecionado e apresentar uma análise comparativamente com a versão base, o PSO �� Particle Swarm Otimization. Quais as vantagens e desvantagens?}{2}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Análsie de desempenho}{2}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” �� a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }{2}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Comparar com a versão base do PSO e analisar a sensibilidade aos diferentes parâmetros do algoritmo, apresentando tabela com resultados.}{2}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Conclusões}{2}{section.7}%
+\contentsline {section}{\numberline {8}Referências}{2}{section.8}%

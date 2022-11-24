@@ -122,7 +122,7 @@ test_loss_squared = test_loss_squared / len(test_y)
 
 print(f"Test loss = {test_loss}")
 print(f"Test loss Square = {test_loss_squared}")      
-torch.save(network.state_dict(), f"network_MSE_2Lay_256_Sigmoid_.tar")
+torch.save(network.state_dict(), f"newNetwork.tar")
 
 
 

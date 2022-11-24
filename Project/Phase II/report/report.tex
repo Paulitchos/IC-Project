@@ -1,0 +1,130 @@
+\documentclass[10pt]{article}
+
+\PassOptionsToPackage{hidelinks}{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, calc, xcolor}
+\usepackage{alphabeta} 
+\usepackage[pdftex]{graphicx}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[]{bookmark}
+\linespread{1.06}
+\setlength{\parskip}{8pt plus2pt minus2pt}
+
+\widowpenalty 10000
+\clubpenalty 10000
+
+\newcommand{\eat}[1]{}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage[official]{eurosym}
+\usepackage{enumitem}
+\setlist{nolistsep,noitemsep}
+\usepackage[]{hyperref}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{lipsum}
+\usepackage{indentfirst}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,shapes.symbols,chains}
+\usepackage{xcolor,colortbl}
+\usepackage{array}
+
+\setlength{\parindent}{2em}
+\renewcommand*\contentsname{Índice}
+\renewcommand\refname{}
+
+\begin{document}
+
+%===========================================================
+\begin{titlepage}
+\begin{center}
+
+% Top 
+\includegraphics[width=0.55\textwidth]{img/logo-isec-transparente.png}~\\[2cm]
+
+
+% Title
+\HRule \\[0.4cm]
+{ \LARGE 
+  \textbf{Inteligência Computacional}\\[0.4cm]
+}
+\HRule \\[1.5cm]
+
+% Docente
+{ \large
+  \textbf{Docente} \\[0.1cm]
+  Inês Dominguês \\ Carlos Pereira \\[2.5cm]
+}
+
+
+% Author
+{ \large
+  \textbf{Alunos} \\[0.1cm]
+  Paulo Henrique Figueira Pestana de Gouveia - a2020121705 \\[0.1cm]
+  Nuno Alexandre Almeida Santos - a2019110035\\[0.1cm]
+}
+
+\vfill
+
+
+
+% Bottom
+{\large \today}
+ 
+\end{center}
+\end{titlepage}
+
+
+\newpage
+
+
+
+%===========================================================
+\tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\newpage
+\setcounter{page}{1}
+
+%===========================================================
+%===========================================================
+\large
+\section{Introdução}\label{sec:intro}
+
+\section{Em que consiste a Computação Evolucionária?}\label{sec:apre-da-org}
+A Computação Evolucionária compreende um conjunto de técnicas de busca e otimização inspiradas na 
+evolução natural das espécies. Desta forma, cria-se uma população de indivíduos que vão reproduzir e 
+competir pela sobrevivência. Os melhores sobrevivem e transferem suas características a novas gerações.
+
+\subsection{Descrição do paradigma de computação evolucionária e possíveis aplicações no contexto de treino de uma rede neuronal}\label{sec:apre-da-org}
+
+\section{Descrição da implementação dos algoritmos}\label{sec:Des-da-imp-dos-alg}
+
+\section{Em que consiste a Inteligência Swarm}\label{sec:ev-da-org}
+\subsection{Enquadrar a área designada de “inteligência Swarm” no domínio da Computação
+            Evolucionária. Deve descrever sumariamente os principais paradigmas e algoritmos,
+            em particular o algoritmo PSO.}\label{sec:apre-da-org}
+
+\section{Funcionamento do algoritmo}\label{sec:an-da-info-fin-da-org}
+\subsection{Descrever em detalhe o algoritmo selecionado e apresentar uma análise comparativamente com a versão base, o PSO \– 
+            Particle Swarm Otimization. Quais as vantagens e desvantagens?}\label{sec:apre-da-org}
+
+\section{Análsie de desempenho}\label{sec:an-da-info-fin-da-org}
+\subsection{Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” \– a função esfera (para dimensão 2 e 3) e 
+            função de Ackley (para dimensão 2 e 3). }\label{sec:apre-da-org}
+\subsection{Comparar com a versão base do PSO e analisar a sensibilidade aos diferentes parâmetros do algoritmo, apresentando tabela 
+            com resultados.}\label{sec:apre-da-org}
+
+\section{Conclusões}\label{sec:an-da-info-fin-da-org}
+
+\vspace{1cm}
+
+\section{Referências}\label{sec:sup-inf-utl}
+\bibliographystyle{ieeetr}
+\bibliography{refs}
+
+
+%===========================================================
+
+%===========================================================
+
+\pagebreak
+\end{document} 
