@@ -57,20 +57,20 @@ def max_min(x,y):
     x = np.array(x) #Mete o train_x no array 
     y = np.array(y)
 
-    print(x.shape)
-    print(y.shape)
+    #print("x:",x.shape)
+    #print("y:",y.shape)
 
     x_max = np.max(x,axis=0)
     y_max = np.max(y)
 
-    print(x_max)
-    print(y_max)
+    #print(x_max)
+    #print(y_max)
 
     x_min = np.min(x,axis=0)
     y_min = np.min(y)
 
-    print(x_min)
-    print(y_min)
+    #print(x_min)
+    #print(y_min)
     
     
     

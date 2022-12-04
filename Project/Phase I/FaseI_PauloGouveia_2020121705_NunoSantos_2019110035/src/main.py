@@ -33,14 +33,17 @@ test_y = y[int(N*0.9):]
 
 """
 train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.2, random_state=0)
+#train_x = (135587,8) #70% - Aproximadamente 72%
+#test_x = (37664,8) #20%
+#train_y = (135587,1)
+#test_y = (37664,1)
 
 train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.1, random_state=0)
 
 x_max,x_min,y_max,y_min = max_min(train_x,train_y)
 
-
 trainset = BitcoinRegressionDataset_train(train_x,train_y,x_max,x_min,y_max,y_min) #matriz com dados normalizados
-
+print(train_x)
 data_loader_train = torch.utils.data.DataLoader( #Otimizar a maneira como le as coisas
     trainset,
     batch_size=16,
