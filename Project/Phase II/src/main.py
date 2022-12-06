@@ -1,85 +1,35 @@
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
 import numpy as np
+
+from IPython.display import Image
 
 # Import PySwarms
 import pyswarms as ps
 from pyswarms.utils.functions import single_obj as fx
-from pyswarms.utils.plotters import plot_cost_history, plot_contour, plot_surface
+from pyswarms.utils.plotters import plot_cost_history, plot_contour
 from pyswarms.utils.plotters.formatters import Mesher, Designer
 
 # Import SwearmPackagePy
 import SwarmPackagePy
 from SwarmPackagePy import testFunctions as tf
 
-# Import class FireflyAlgorithm
-from FireflyAlgorithm import FireflyAlgorithm 
-
-
-def sphere(x):
-    """Sphere objective function.
-    Has a global minimum at :code:`0` and with a search domain of
-        :code:`[-inf, inf]`
-    Parameters
-    ----------
-    x : numpy.ndarray
-        set of inputs of shape :code:`(n_particles, dimensions)`
-    Returns
-    -------
-    numpy.ndarray
-        computed cost of size :code:`(n_particles, )`
-    """
-    j = (x ** 2.0).sum(axis=0)
-
-    return j
-
-def ackley(x):
-    """Ackley's objective function.
-    Has a global minimum of `0` at :code:`f(0,0,...,0)` with a search
-    domain of [-32, 32]
-    Parameters
-    ----------
-    x : numpy.ndarray
-        set of inputs of shape :code:`(n_particles, dimensions)`
-    Returns
-    -------
-    numpy.ndarray
-        computed cost of size :code:`(n_particles, )`
-    ------
-    ValueError
-        When the input is out of bounds with respect to the function
-        domain
-    """
-    if not np.logical_and(x >= -32, x <= 32).all():
-        raise ValueError("Input for Ackley function must be within [-32, 32].")
-
-    d = x.shape[0]
-    j = (
-        -20.0 * np.exp(-0.2 * np.sqrt((1 / d) * (x ** 2).sum(axis=0)))
-        - np.exp((1 / float(d)) * np.cos(2 * np.pi * x).sum(axis=0))
-        + 20.0
-        + np.exp(1)
-    )
-
-    return j
-
-           
-FA = FireflyAlgorithm()
-
+# ================================================================== SPHERE ================================================================== #
 # Set-up hyperparameters
 #c1 - cognitive parameter
 #c2 - social parameter
 #c3 - inertica parameter
+
+
 options = {'c1': 0.5, 'c2': 0.3, 'w':0.9}
 
+# ================================================================== SPHERE -> Dim = 2 ================================================================== #
 # Call instance of PSO
 optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=2, options=options)#A dimensao não é definida por nós, é a dimensao do problema
-best = FA.run(function=sphere, dim=2, lb=-5, ub=5, max_evals=1000) # lb e ub representa os limites inferiores e superiores
-print("\nFireFly [Class-Dim=2]: ",best)
-print("\n")
 
+# Call Firefly Algorithm
 alh = SwarmPackagePy.fa(10,tf.sphere_function, -5, 5, 2, 1000, 1, 1, 1, 0.1, 0, 0.1)
-print("\nFireFly [Library-Dim=2]: ",alh.get_Gbest()) #Retorna a melhor posição do algoritmo
+print("\nFireFly (Sphere) [Best Pos Dim=2]: ",alh.get_Gbest()) #Retorna a melhor posição do algoritmo
+print("FireFly (Sphere) [Best Cos Dim=2]: ",tf.sphere_function(alh.get_Gbest()))
 #print("Agentes: ",alh.get_agents()) #Retorna um histórico de todos os agentes do algoritmo 
 print("\n")
 
@@ -92,65 +42,104 @@ plot_cost_history(optimizer.cost_history)
 plt.show()
 
 # Plot the sphere function's mesh for better plots
-m = Mesher(func=fx.sphere,
-           limits=[(-1,1), (-1,1)])
-# Adjust figure limits
-d = Designer(limits=[(-1,1), (-1,1), (-0.1,1)],
-             label=['x-axis', 'y-axis', 'z-axis'])
+m = Mesher(func=fx.sphere,limits=[(-1,1), (-1,1)])
 
-pos_history_3d = m.compute_history_3d(optimizer.pos_history) # preprocessing
-animation3d = plot_surface(pos_history=pos_history_3d,
-                           mesher=m, designer=d,
-                           mark=(0,0,0))    
-plt.show()
- 
+animation = plot_contour(pos_history=optimizer.pos_history,mesher=m,mark=(0,0))
+
+#Enables us to view it in a Jupyter notebook
+animation.save('Pyramid.gif',writer='imagemagick',fps=10)
+Image(url='Pyramid.gif')
+
+# ================================================================== SPHERE -> Dim = 3 ================================================================== #
 # Call instance of PSO
 optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=3, options=options)#A dimensao não é definida por nós, é a dimensao do problema
-best = FA.run(function=sphere, dim=3, lb=-5, ub=5, max_evals=1000) # lb e ub representa os limites inferiors e superiores
-print("\nFireFly [Class-Dim=3]: ",best)
+
+# Call Firefly algorithm
+alh = SwarmPackagePy.fa(10,tf.sphere_function, -5, 5, 3, 1000, 1, 1, 1, 0.1, 0, 0.1)
+print("\nFireFly (Sphere) [Best Pos Dim=3]: ",alh.get_Gbest())
+print("\nFIreFly (Sphere) [Best Cost Dim=3]: ",tf.sphere_function(alh.get_Gbest()))
+#print("Agentes: ",alh.get_agents()) #Retorna um histórico de todos os agentes do algoritmo 
 print("\n")
 
-alh = SwarmPackagePy.fa(10,tf.sphere_function, -5, 5, 3, 1000, 1, 1, 1, 0.1, 0, 0.1)
-print("\nFireFly [Library-Dim=3]: ",alh.get_Gbest())
-print("\n")
-# Perform optimizationsphere
+
+# Perform optimizations sphere
 cost,pos = optimizer.optimize(fx.sphere, iters=1000)
+
+# Plot the cost
+plot_cost_history(optimizer.cost_history)
+plt.show()
+
+# Plot the sphere function's mesh for better plots
+m = Mesher(func=fx.sphere,limits=[(-1,1), (-1,1)])
+
+animation = plot_contour(pos_history=optimizer.pos_history,mesher=m,mark=(0,0))
+
+#Enables us to view it in a Jupyter notebook
+animation.save('Pyramid2.gif',writer='imagemagick',fps=10)
+Image(url='Pyramid2.gif')
+
 
 
 # ================================================================== ACKLEY ================================================================== #
-
 # Set-up hyperparameters
 #c1 - cognitive parameter
 #c2 - social parameter
 #c3 - inertica parameter
+
+
 options = {'c1': 0.5, 'c2': 0.3, 'w':0.9}
 
+# ================================================================== ACKLEY -> Dim = 2 ================================================================== #
 # Call instance of PSO
 optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=2, options=options)#A dimensao não é definida por nós, é a dimensao do problema
-best = FA.run(function=ackley, dim=2, lb=-5, ub=5, max_evals=1000) # lb e ub representa os limites inferiors e superiores
-print("\nAckley [Class-Dim=2]: ",best)
+
+# Call Firefly Algorithm
+alh = SwarmPackagePy.fa(10,tf.ackley_function, -5, 5, 2, 1000, 1, 1, 1, 0.1, 0, 0.1)
+print("\nFirefly (Ackley) [Best Pos Dim=2]: ",alh.get_Gbest()) #Retorna as cordenadas x,y
+print("\nFIreFly (Ackley) [Best Cost Dim=2]: ",tf.ackley_function(alh.get_Gbest()))
+#print("Agentes: ",alh.get_agents()) #Retorna um histórico de todos os agentes do algoritmo 
 print("\n")
 
-alh = SwarmPackagePy.fa(10,tf.ackley_function, -5, 5, 2, 1000, 1, 1, 1, 0.1, 0, 0.1)
-print("\nAckley [Library-Dim=2]: ",alh.get_Gbest()) #Retorna as cordenadas x,y
-print("\n")
-# Perform optimizationsphere
+# Perform optimizations Ackley
 cost,pos = optimizer.optimize(fx.ackley, iters=1000)
 
+# Plot the cost
+plot_cost_history(optimizer.cost_history)
+plt.show()
+
+# Plot the sphere function's mesh for better plots
+m = Mesher(func=fx.ackley,limits=[(-32,32), (-32,32)])
+
+#Make animation
+animation = plot_contour(pos_history=optimizer.pos_history,mesher=m,mark=(0,0))
+#Enables us to view it in a Jupyter notebook
+animation.save('Pyramid3.gif',writer='imagemagick',fps=10)
+Image(url='Pyramid3.gif')
+
+# ================================================================== ACKLEY -> Dim = 3 ================================================================== #
 # Call instance of PSO
 optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=3, options=options)#A dimensao não é definida por nós, é a dimensao do problema
-best = FA.run(function=ackley, dim=3, lb=-5, ub=5, max_evals=1000) # lb e ub representa os limites inferiors e superiores
-print("\nAckley [Class-Dim=3]: ",best)
+
+# Call Firefly Algorithm
+alh = SwarmPackagePy.fa(10,tf.ackley_function, -5, 5, 3, 1000, 1, 1, 1, 0.1, 0, 0.1)
+print("\nFirefly (Ackley) [Best Pos Dim=3]: ",alh.get_Gbest()) #Retorna as cordenadas x,y
+print("\nFIreFly (Ackley) [Best Cost Dim=3]: ",tf.ackley_function(alh.get_Gbest()))
+#print("Agentes: ",alh.get_agents()) #Retorna um histórico de todos os agentes do algoritmo 
 print("\n")
 
-alh = SwarmPackagePy.fa(10,tf.ackley_function, -5, 5, 3, 1000, 1, 1, 1, 0.1, 0, 0.1)
-print("\nAckley [Library-Dim=3]: ",alh.get_Gbest())
-print("\n")
 # Perform optimizationsphere
 cost,pos = optimizer.optimize(fx.ackley, iters=1000)
 
+# Plot the cost
+plot_cost_history(optimizer.cost_history)
+plt.show()
+
+# Plot the sphere function's mesh for better plots
+m = Mesher(func=fx.ackley,limits=[(-32,32), (-32,32)])
 
 
-
-
+animation = plot_contour(pos_history=optimizer.pos_history,mesher=m,mark=(0,0))
+#Enables us to view it in a Jupyter notebook
+animation.save('Pyramid4.gif',writer='imagemagick',fps=10)
+Image(url='Pyramid4.gif')
 
