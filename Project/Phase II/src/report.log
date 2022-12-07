@@ -1,0 +1,60 @@
+2022-12-07 20:31:35,206 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 20:31:36,962 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 1.0681003763518923e-43, best pos: [ 1.51879308e-22 -2.89383333e-22]
+2022-12-07 20:31:41,684 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 20:31:41,687 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Pyramid.gif
+2022-12-07 20:43:35,917 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 20:43:37,173 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 1.6222529689086882e-42, best pos: [-1.2296491e-21  3.3198805e-22]
+2022-12-07 20:43:39,728 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 20:43:39,732 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Sphere.gif
+2022-12-07 21:12:06,577 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:12:06,717 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 2.5715517252065026e-07, best pos: [0.00029694 0.00041108]
+2022-12-07 21:12:09,153 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 21:12:09,154 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Sphere.gif
+2022-12-07 21:13:21,214 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:13:21,339 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 1.4013302243979117e-06, best pos: [-0.00021666 -0.00061471  0.00098819]
+2022-12-07 21:13:22,430 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:13:23,639 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.440892098500626e-16, best pos: [1.57857368e-16 2.82180911e-16]
+2022-12-07 21:13:25,556 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:13:26,684 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.440892098500626e-16, best pos: [-5.51547761e-18  2.34018051e-16 -9.62781445e-17]
+2022-12-07 21:13:59,166 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:14:00,287 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.612866013343753e-42, best pos: [-8.34888965e-22 -1.97884472e-21]
+2022-12-07 21:14:02,755 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 21:14:02,757 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Sphere.gif
+2022-12-07 21:26:12,621 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:26:12,758 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.813327686993582e-08, best pos: [ 0.00019249 -0.00010526]
+2022-12-07 21:26:15,471 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 21:26:15,472 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Sphere.gif
+2022-12-07 21:27:25,162 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:27:26,379 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 2.4988853046476305e-39, best pos: [-2.66846560e-20 -3.96406962e-20 -1.46775215e-20]
+2022-12-07 21:27:27,551 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:27:27,666 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 0.0003797958329596618, best pos: [-3.78907278e-05  1.28644698e-04]
+2022-12-07 21:30:06,790 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:30:06,906 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.742046468817781e-09, best pos: [1.47011343e-05 6.72749814e-05]
+2022-12-07 21:30:09,329 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 21:30:09,331 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Sphere.gif
+2022-12-07 21:31:13,893 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:31:15,003 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 3.475437693230632e-42, best pos: [-3.53669425e-22  1.81110963e-21  2.65023675e-22]
+2022-12-07 21:31:16,122 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:31:16,241 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 0.0009737034392469646, best pos: [ 0.00011067 -0.00032481]
+2022-12-07 21:31:18,897 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 21:31:18,899 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Ackley.gif
+2022-12-07 21:32:24,129 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:32:25,292 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.440892098500626e-16, best pos: [ 2.59032695e-16 -1.85811221e-16 -2.83349131e-16]
+2022-12-07 21:33:58,464 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:33:58,575 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.886446662479543e-07, best pos: [-0.00017074  0.00067786]
+2022-12-07 21:34:00,970 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 21:34:00,972 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Sphere.gif
+2022-12-07 21:35:06,631 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:35:07,722 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 6.709805164639945e-41, best pos: [ 4.38431148e-21 -6.91848205e-21  1.02325627e-22]
+2022-12-07 21:35:08,825 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:35:08,931 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 0.0006951260637113599, best pos: [ 2.32666187e-04 -7.73859168e-05]
+2022-12-07 21:36:36,321 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:36:36,461 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 1.2720596832234974e-07, best pos: [-0.00012603 -0.00033365]
+2022-12-07 21:36:39,050 - matplotlib.animation - INFO - Animation.save using <class 'matplotlib.animation.ImageMagickWriter'>
+2022-12-07 21:36:39,051 - matplotlib.animation - INFO - MovieWriter._run: running command: convert -size 1000x800 -depth 8 -delay 10.0 -loop 0 rgba:- -layers OptimizePlus Sphere.gif
+2022-12-07 21:37:49,808 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:37:50,892 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 1.5449979642819344e-41, best pos: [-1.17491090e-21  1.15903093e-21 -3.56738158e-21]
+2022-12-07 21:37:52,059 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:37:52,171 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 0.0011299281317254106, best pos: [ 0.00037124 -0.00014347]
+2022-12-07 21:37:53,265 - pyswarms.single.global_best - INFO - Optimize for 1000 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-12-07 21:37:54,389 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.440892098500626e-16, best pos: [-7.92715767e-17  4.51508263e-16  1.37197333e-16]
