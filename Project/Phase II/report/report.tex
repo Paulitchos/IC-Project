@@ -94,17 +94,43 @@
     Ao falar sobre evolução, é importante primeiro identificar a área em que a evolução pode ser definida, por exemplo, cósmica, química, estelar e planetária,
 sistemas de evolução orgânicos ou feitos pelo homem. Para essas diferentes áreas, a evolução pode
 ser interpretado de forma diferente. 
-    A Computação Evolucionária compreende um conjunto de técnicas de busca e otimização inspiradas na 
+    
+A Computação Evolucionária compreende um conjunto de técnicas de busca e otimização inspiradas na 
 evolução natural das espécies. Desta forma, cria-se uma população de indivíduos que vão reproduzir e 
 competir pela sobrevivência. Os melhores sobrevivem e transferem suas características a novas gerações.
 
 
 \subsection{Descrição do paradigma de computação evolucionária e possíveis aplicações no contexto de treino de uma rede neuronal}\label{sec:desc-para}
 
+Sistemas de CE resolvem problemas por meio de população, 
+tentativa e erro, metaheurística ou otimização estocástica. Um 
+conjunto inicial de candidatos a solução é gerado e 
+atualizado iterativamente: remoção das 
+soluções menos desejadas, inserção de ruído.
+
+Em termos técnicos, as populações de solução evoluem e 
+se adaptam à medida que estão sujeitas à seleção e mutação 
+naturais ou artificiais. Ou seja, melhor ajuste (a função 
+quantifica o  quão adaptável/desejável é a solução). 
+A CE é popular na IC porque leva a soluções otimizadas 
+em uma ampla variedade de contextos, e há 
+muitas variantes e extensões para problemas e 
+estruturas de dados específicos.
+
+No contexto de redes neuronais, a computação evolutiva pode 
+ser aplicada a soluções dadas enquanto treina a rede. 
+No exemplo de classificação de forma geométrica usando CE, 
+a solução evolui através de seleção e mutação natural
+ou artificial à medida que a rede é treinada.
+Isso nos permite generalizar a forma com mais precisão com o 
+auxílio de descartar soluções menos desejáveis.
+
+\newpage
 \section{Inteligência Swarm}\label{sec:ev-da-org}
 Conjunto estruturado de indivíduos (ou agentes) que interagem entre si.
 Os Indivíduos pertencentes ao swarm (enxame) interagem para atingirem um objectivo comum,
 de forma mais eficiente do que agindo individualmente.
+
 Formalmente, um enxame pode ser definido como um grupo de agentes (geralmente móveis) que se comunicam entre si (seja direta ou indiretamente), agindo no seu ambiente local.
  Mais formalmente, inteligência Swarm é a propriedade de um sistema pelo qual os comportamentos coletivos de agentes não sofisticados interagindo localmente com seu ambiente causam o surgimento de padrões funcionais globais coerentes.
  O objetivo dos modelos computacionais de inteligência Swarm é modelar o simples
@@ -141,13 +167,8 @@ melhor global e fazendo com que todas consigam convergir nesse ponto.
 
 \includegraphics{img/PSO.png}
 
+\newpage
 
-            
-
-\section{FireFly}\label{sec:FireFly}
-A maioria das espécies de vaga-lumes são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
-dos flashes é atrair vaga-lumes do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
-predador que um vaga-lume tem um gosto amargo. 
 
   \section{Particle Swarm Otimization. Quais as vantagens e desvantagens?}\label{sec:swarm-oti}
   O Algoritmo Firefly é baseado em duas coisas importantes: a mudança na intensidade da luz e atratividade. Para simplificar, 
@@ -160,12 +181,20 @@ predador que um vaga-lume tem um gosto amargo.
   \item À medida que a distância entre dois vaga-lumes aumenta, o brilho visível de um determinado vaga-lume para o outro diminui. 
   \item Se um vaga-lume não vê nenhum vaga-lume que seja mais brilhante do que ele, ele se move aleatoriamente. 
 \end{enumerate}
-\subsection{Descrever em detalhe o algoritmo selecionado e apresentar uma análise comparativamente com a versão base, o PSO.  }\label{sec:desc-algo}
+
+\section{FireFly}\label{sec:FireFly}
+A maioria das espécies de vaga-lumes são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
+dos flashes é atrair vaga-lumes do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
+predador que um vaga-lume tem um gosto amargo. 
+
+\subsection{Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}\label{sec:desc-algo}
 
 \section{Análsie de desempenho}\label{sec:an-do-desem}
+
 \subsection{Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }\label{sec:apre-da-org}
+
 \subsection{Comparar com a versão base do PSO e analisar a sensibilidade aos diferentes parâmetros do algoritmo, apresentando tabela 
-            com resultados.}\label{sec:comp-PSO}
+com resultados.}\label{sec:comp-PSO}
 
 \section{Conclusões}\label{sec:an-da-info-fin-da-org}
 
