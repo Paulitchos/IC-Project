@@ -150,7 +150,7 @@ O algoritmo de otimização de enxame de partículas (PSO) é um algoritmo de pe
 A posição da partícula, xi, vai sendo atualizada de acordo com a equação:
 \begin{equation}
   \vspace{1cm}
-    xi (t+1) = xi (t) + w.vi(t) + C1.rnd(PBEST ‐ xi (t)) + C2.rnd(GBEST ‐ xi (t))
+    x_i (t+1) = x_i (t) + w.v_i(t) + C1.rnd(PBEST ‐ x_i (t)) + C2.rnd(GBEST ‐ x_i (t))
 \end{equation}
 Na equação (1), vi(t) representa o vetor velocidade da partícula i no tempo t, w é o fator de inércia, rnd representa números aleatórios de distribuição uniforme entre 0‐1, C1 e C2 representam respectivamente os parâmetros social e cognitivo, PBEST é a melhor posição individual e GBEST é a melhor posição social. Os parâmetros C1 e C2 ajustam o balanço entre a influência social e a aprendizagem da partícula individual.
 
@@ -168,12 +168,47 @@ melhor global e fazendo com que todas consigam convergir nesse ponto.
 \includegraphics{img/PSO.png}
 
 \newpage
+\section{Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}\label{sec:desc-algo}
 
+\subsection{FireFly}\label{sec:FireFly}
+A maioria das espécies de vaga-lumes são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
+dos flashes é atrair vaga-lumes do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
+predador que um vaga-lume tem um gosto amargo.
 
-  \section{Particle Swarm Otimization. Quais as vantagens e desvantagens?}\label{sec:swarm-oti}
-  O Algoritmo Firefly é baseado em duas coisas importantes: a mudança na intensidade da luz e atratividade. Para simplificar, 
-  assume-se que a atratividade de um vaga-lume é definida por seu brilho que está relacionado com a função objetivo.
-  O algoritmo utiliza o seguinte modelo de comportamento do vaga-lume: 
+\subsection{Firefly algorithm}
+Com base nas propriedades piscantes das espécies de 
+pirilampos, Xin-She Yang [148,149] desenvolveu o 
+Firefly Algorithm (FA) em 2008. Um sistema não linear que 
+combina o decaimento exponencial da absorção de luz e lei do 
+inverso do quadrado da variação de luz usa a distância. 
+Em FA, a principal equação algorítmica para a posição é xi 
+(como o vetor de solução do problema) é:
+\begin{equation}
+  x_i^{t+1} = x_i^t + \beta_0e^{-\gamma r^2_{ij}}(x_j^t - x_i^t) + \alpha \epsilon_i^t
+\end{equation}
+
+onde \(\alpha\) é um fator de escala que controla o tamanho 
+do passo do passeio aleatório e \gamma é um parâmetro 
+dependente de escala que controla a visibilidade do pirilampo
+(e o modo de busca). Além disso \(\beta_0\) é a constante 
+gravitacional quando a distância entre dois pirilampos é zero
+(ou seja, \(r_{ij} = 0\)). Este sistema é um sistema não 
+linear que leva a recursos ricos em termos de comportamento 
+algorítmico.
+
+Como o brilho dos pirilampos está relacionado à paisagem 
+objetiva usando sua posição como índice, a atratividade dos 
+pirilampos vistos por outros depende de sua posição relativa
+e brilho relativo. Portanto, a beleza está nos olhos de quem vê.
+Portanto, comparações pareadas são necessárias para 
+comparar todos os pirilampos.
+
+\subsection{Análise comparativamente a PSO}
+O algoritmo Firefly compartilha muitas semelhanças com 
+algoritmos SI, como PSO.
+Parece ser mais eficaz na otimização multiobjetivo. 
+O algoritmo Firefly tem cinco regras baseadas nas propriedades 
+piscantes dos pirilampos reais:
 \begin{enumerate}
   \item Todos os vaga-lumes são capazes de se atrair independentemente do sexo; 
   \item A atratividade de um vaga-lume para outros indivíduos é proporcional ao seu brilho. 
@@ -182,13 +217,7 @@ melhor global e fazendo com que todas consigam convergir nesse ponto.
   \item Se um vaga-lume não vê nenhum vaga-lume que seja mais brilhante do que ele, ele se move aleatoriamente. 
 \end{enumerate}
 
-\section{FireFly}\label{sec:FireFly}
-A maioria das espécies de vaga-lumes são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
-dos flashes é atrair vaga-lumes do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
-predador que um vaga-lume tem um gosto amargo. 
-
-\subsection{Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}\label{sec:desc-algo}
-
+\newpage
 \section{Análsie de desempenho}\label{sec:an-do-desem}
 
 \subsection{Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }\label{sec:apre-da-org}

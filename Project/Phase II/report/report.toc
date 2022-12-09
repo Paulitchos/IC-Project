@@ -4,11 +4,12 @@
 \contentsline {subsection}{\numberline {2.1}Descrição do paradigma de computação evolucionária e possíveis aplicações no contexto de treino de uma rede neuronal}{1}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Inteligência Swarm}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}PSO}{2}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Particle Swarm Otimization. Quais as vantagens e desvantagens?}{4}{section.4}%
-\contentsline {section}{\numberline {5}FireFly}{4}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}{4}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Análsie de desempenho}{4}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }{4}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Comparar com a versão base do PSO e analisar a sensibilidade aos diferentes parâmetros do algoritmo, apresentando tabela com resultados.}{4}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Conclusões}{4}{section.7}%
-\contentsline {section}{\numberline {8}Referências}{4}{section.8}%
+\contentsline {section}{\numberline {4}Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}FireFly}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Firefly algorithm}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Análise comparativamente a PSO}{4}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Análsie de desempenho}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Comparar com a versão base do PSO e analisar a sensibilidade aos diferentes parâmetros do algoritmo, apresentando tabela com resultados.}{5}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Conclusões}{5}{section.6}%
+\contentsline {section}{\numberline {7}Referências}{5}{section.7}%
