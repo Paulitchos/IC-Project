@@ -89,22 +89,48 @@
 \large
 \section{Introdução}\label{sec:intro}
 
-\section{Em que consiste a Computação Evolucionária?}\label{sec:apre-da-org}
+\section{Em que consiste a Computação Evolucionária?}\label{sec:comp-evo}
     A evolução é um processo de otimização em que o objetivo é melhorar a capacidade de um organismo (ou sistema) sobreviver em ambientes dinâmicos e competitivos.
     Ao falar sobre evolução, é importante primeiro identificar a área em que a evolução pode ser definida, por exemplo, cósmica, química, estelar e planetária,
 sistemas de evolução orgânicos ou feitos pelo homem. Para essas diferentes áreas, a evolução pode
 ser interpretado de forma diferente. 
-    A Computação Evolucionária compreende um conjunto de técnicas de busca e otimização inspiradas na 
+    
+A Computação Evolucionária compreende um conjunto de técnicas de busca e otimização inspiradas na 
 evolução natural das espécies. Desta forma, cria-se uma população de indivíduos que vão reproduzir e 
 competir pela sobrevivência. Os melhores sobrevivem e transferem suas características a novas gerações.
 
 
-\subsection{Descrição do paradigma de computação evolucionária e possíveis aplicações no contexto de treino de uma rede neuronal}\label{sec:apre-da-org}
+\subsection{Descrição do paradigma de computação evolucionária e possíveis aplicações no contexto de treino de uma rede neuronal}\label{sec:desc-para}
 
+Sistemas de CE resolvem problemas por meio de população, 
+tentativa e erro, metaheurística ou otimização estocástica. Um 
+conjunto inicial de candidatos a solução é gerado e 
+atualizado iterativamente: remoção das 
+soluções menos desejadas, inserção de ruído.
+
+Em termos técnicos, as populações de solução evoluem e 
+se adaptam à medida que estão sujeitas à seleção e mutação 
+naturais ou artificiais. Ou seja, melhor ajuste (a função 
+quantifica o  quão adaptável/desejável é a solução). 
+A CE é popular na IC porque leva a soluções otimizadas 
+em uma ampla variedade de contextos, e há 
+muitas variantes e extensões para problemas e 
+estruturas de dados específicos.
+
+No contexto de redes neuronais, a computação evolutiva pode 
+ser aplicada a soluções dadas enquanto treina a rede. 
+No exemplo de classificação de forma geométrica usando CE, 
+a solução evolui através de seleção e mutação natural
+ou artificial à medida que a rede é treinada.
+Isso nos permite generalizar a forma com mais precisão com o 
+auxílio de descartar soluções menos desejáveis.
+
+\newpage
 \section{Inteligência Swarm}\label{sec:ev-da-org}
 Conjunto estruturado de indivíduos (ou agentes) que interagem entre si.
 Os Indivíduos pertencentes ao swarm (enxame) interagem para atingirem um objectivo comum,
 de forma mais eficiente do que agindo individualmente.
+
 Formalmente, um enxame pode ser definido como um grupo de agentes (geralmente móveis) que se comunicam entre si (seja direta ou indiretamente), agindo no seu ambiente local.
  Mais formalmente, inteligência Swarm é a propriedade de um sistema pelo qual os comportamentos coletivos de agentes não sofisticados interagindo localmente com seu ambiente causam o surgimento de padrões funcionais globais coerentes.
  O objetivo dos modelos computacionais de inteligência Swarm é modelar o simples
@@ -118,13 +144,13 @@ concentração de feromônio. Daí surge o comportamento de encontrar a melhor a
 formigas que frequentam cemitérios resultam no comportamento complexo de agrupar objetos semelhantes
 em clusters.
 
-\subsection{PSO}\label{sec:apre-da-org}
+\subsection{PSO}\label{sec:PSO}
 O algoritmo de otimização de enxame de partículas (PSO) é um algoritmo de pesquisa baseado em população baseado na simulação do comportamento social de pássaros dentro de um bando, que são denominados por partículas. Esse método se inicializa aleatoriamente, através de um conjunto de partículas com velocidades e posições aleatórias. Após essa inicialização os indivíduos são avaliados através da função de avaliação. Em um algoritmo PSO existe um conjunto de vetores cujas trajetórias oscilam em torno de uma região definida por cada melhor posição individual (PBEST) e a melhor posição dos outros (GBEST).
 
 A posição da partícula, xi, vai sendo atualizada de acordo com a equação:
 \begin{equation}
   \vspace{1cm}
-    xi (t+1) = xi (t) + w.vi(t) + C1.rnd(PBEST ‐ xi (t)) + C2.rnd(GBEST ‐ xi (t))
+    x_i (t+1) = x_i (t) + w.v_i(t) + C1.rnd(PBEST ‐ x_i (t)) + C2.rnd(GBEST ‐ x_i (t))
 \end{equation}
 Na equação (1), vi(t) representa o vetor velocidade da partícula i no tempo t, w é o fator de inércia, rnd representa números aleatórios de distribuição uniforme entre 0‐1, C1 e C2 representam respectivamente os parâmetros social e cognitivo, PBEST é a melhor posição individual e GBEST é a melhor posição social. Os parâmetros C1 e C2 ajustam o balanço entre a influência social e a aprendizagem da partícula individual.
 
@@ -139,20 +165,50 @@ irem nesse sentido. À medida que vão andando vão-se lembrando da sua melhor p
 posição para se dirigirem para a posição óptima. Como iniciaram em posições aleatórias no mapa ao dirigirem-se todas para o mesmo ponto inevitavelmente vão passar pelo ponto óptimo, alterando ao
 melhor global e fazendo com que todas consigam convergir nesse ponto.
 
-\includegraphics[opção]{img/PSO.png}
+\includegraphics{img/PSO.png}
 
+\newpage
+\section{Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}\label{sec:desc-algo}
 
-            
-
-\section{FireFly}\label{sec:an-da-info-fin-da-org}
+\subsection{FireFly}\label{sec:FireFly}
 A maioria das espécies de vaga-lumes são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
 dos flashes é atrair vaga-lumes do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
-predador que um vaga-lume tem um gosto amargo. 
+predador que um vaga-lume tem um gosto amargo.
 
-  \section{Particle Swarm Otimization. Quais as vantagens e desvantagens?}\label{sec:apre-da-org}
-  O Algoritmo Firefly é baseado em duas coisas importantes: a mudança na intensidade da luz e atratividade. Para simplificar, 
-  assume-se que a atratividade de um vaga-lume é definida por seu brilho que está relacionado com a função objetivo.
-  O algoritmo utiliza o seguinte modelo de comportamento do vaga-lume: 
+\subsection{Firefly algorithm}
+Com base nas propriedades piscantes das espécies de 
+pirilampos, Xin-She Yang [148,149] desenvolveu o 
+Firefly Algorithm (FA) em 2008. Um sistema não linear que 
+combina o decaimento exponencial da absorção de luz e lei do 
+inverso do quadrado da variação de luz usa a distância. 
+Em FA, a principal equação algorítmica para a posição é xi 
+(como o vetor de solução do problema) é:
+\begin{equation}
+  x_i^{t+1} = x_i^t + \beta_0e^{-\gamma r^2_{ij}}(x_j^t - x_i^t) + \alpha \epsilon_i^t
+\end{equation}
+
+onde \(\alpha\) é um fator de escala que controla o tamanho 
+do passo do passeio aleatório e \gamma é um parâmetro 
+dependente de escala que controla a visibilidade do pirilampo
+(e o modo de busca). Além disso \(\beta_0\) é a constante 
+gravitacional quando a distância entre dois pirilampos é zero
+(ou seja, \(r_{ij} = 0\)). Este sistema é um sistema não 
+linear que leva a recursos ricos em termos de comportamento 
+algorítmico.
+
+Como o brilho dos pirilampos está relacionado à paisagem 
+objetiva usando sua posição como índice, a atratividade dos 
+pirilampos vistos por outros depende de sua posição relativa
+e brilho relativo. Portanto, a beleza está nos olhos de quem vê.
+Portanto, comparações pareadas são necessárias para 
+comparar todos os pirilampos.
+
+\subsection{Análise comparativamente a PSO}
+O algoritmo Firefly compartilha muitas semelhanças com 
+algoritmos SI, como PSO.
+Parece ser mais eficaz na otimização multiobjetivo. 
+O algoritmo Firefly tem cinco regras baseadas nas propriedades 
+piscantes dos pirilampos reais:
 \begin{enumerate}
   \item Todos os vaga-lumes são capazes de se atrair independentemente do sexo; 
   \item A atratividade de um vaga-lume para outros indivíduos é proporcional ao seu brilho. 
@@ -160,12 +216,14 @@ predador que um vaga-lume tem um gosto amargo.
   \item À medida que a distância entre dois vaga-lumes aumenta, o brilho visível de um determinado vaga-lume para o outro diminui. 
   \item Se um vaga-lume não vê nenhum vaga-lume que seja mais brilhante do que ele, ele se move aleatoriamente. 
 \end{enumerate}
-\subsection{Descrever em detalhe o algoritmo selecionado e apresentar uma análise comparativamente com a versão base, o PSO \–  }\label{sec:apre-da-org}
 
-\section{Análsie de desempenho}\label{sec:an-da-info-fin-da-org}
-\subsection{Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” \– a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }\label{sec:apre-da-org}
+\newpage
+\section{Análsie de desempenho}\label{sec:an-do-desem}
+
+\subsection{Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }\label{sec:apre-da-org}
+
 \subsection{Comparar com a versão base do PSO e analisar a sensibilidade aos diferentes parâmetros do algoritmo, apresentando tabela 
-            com resultados.}\label{sec:apre-da-org}
+com resultados.}\label{sec:comp-PSO}
 
 \section{Conclusões}\label{sec:an-da-info-fin-da-org}
 
