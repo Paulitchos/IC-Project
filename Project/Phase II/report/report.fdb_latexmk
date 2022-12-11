@@ -1,5 +1,6 @@
 # Fdb version 3
 <<<<<<< HEAD
+<<<<<<< HEAD
 ["pdflatex"] 1670169311 "c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase II/report/report.tex" "report.pdf" "report" 1670169311
   "c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase II/report/report.tex" 1669920161 5161 c425cdd2fb3844addf2fff1d120e9bb1 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1664468694 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -165,6 +166,8 @@
   "report.tex" 1669920161 5161 c425cdd2fb3844addf2fff1d120e9bb1 ""
   "report.toc" 0 -1 0 "pdflatex"
 =======
+=======
+>>>>>>> main
 ["bibtex report"] 1670611190 "report.aux" "report.bbl" "report" 1670611192
   "/opt/texlive/2022/texmf-dist/bibtex/bst/base/ieeetr.bst" 1664590314 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "refs.bib" 0 -1 0 ""
@@ -363,6 +366,9 @@
   "report.bbl" 0 -1 0 "bibtex report"
   "report.tex" 1670611188 11920 89ab6196f050ee78a824a8cd983b49a1 ""
   "report.toc" 1670611191 1589 e6a17cf382c042e03d39fb4658fe1720 "pdflatex"
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
   (generated)
   "report.aux"
