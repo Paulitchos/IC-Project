@@ -1,8 +1,8 @@
-PWD /mnt/windows/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase II/report
+PWD /home/paulitchos/Documents/IC-Project/Project/Phase II/report
 INPUT /opt/texlive/2022/texmf.cnf
 INPUT /opt/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /opt/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/nuno/Área de Trabalho/GitHub/IC-Project/Project/Phase II/report/report.tex
+INPUT /home/paulitchos/Documents/IC-Project/Project/Phase II/report/report.tex
 OUTPUT report.log
 INPUT /opt/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /opt/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -984,6 +984,7 @@ INPUT img/PSO.png
 INPUT ./img/PSO.png
 INPUT ./img/PSO.png
 INPUT /opt/texlive/2022/texmf-dist/fonts/tfm/public/cbfonts/grmn1200.tfm
+INPUT /opt/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT ./img/PSOsphere.png
 INPUT ./img/PSOsphere.png
 INPUT img/PSOsphere.png
@@ -1005,6 +1006,7 @@ INPUT img/Fireflyackley.png
 INPUT ./img/Fireflyackley.png
 INPUT ./img/Fireflyackley.png
 INPUT report.aux
+INPUT /opt/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1018,3 +1020,4 @@ INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb
+INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb

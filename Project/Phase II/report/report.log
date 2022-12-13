@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.2)  13 DEC 2022 01:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.1)  13 DEC 2022 03:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/nuno/Área de Trabalho/GitHub/IC-Project/Project/Phase II/report/report.tex"
-(/home/nuno/Área de Trabalho/GitHub/IC-Project/Project/Phase II/report/report.tex
+**"/home/paulitchos/Documents/IC-Project/Project/Phase II/report/report.tex"
+(/home/paulitchos/Documents/IC-Project/Project/Phase II/report/report.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28> (/opt/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -887,15 +887,6 @@ Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
 \rownum=\count317
 ) (./report.aux
 
-LaTeX Warning: Label `sec:apre-da-org' multiply defined.
-
-
-LaTeX Warning: Label `sec:apre-da-org' multiply defined.
-
-
-LaTeX Warning: Label `sec:apre-da-org' multiply defined.
-
-
 LaTeX Warning: Label `sec:comp-PSO' multiply defined.
 
 
@@ -1064,48 +1055,48 @@ l.128 \newpage
 <img/PSO.png, id=80, 251.43938pt x 216.81pt>
 File: img/PSO.png Graphic file (type png)
 <use img/PSO.png>
-Package pdftex.def Info: img/PSO.png  used on input line 168.
+Package pdftex.def Info: img/PSO.png  used on input line 169.
 (pdftex.def)             Requested size: 251.43875pt x 216.80946pt.
  [3 <./img/PSO.png>] [4] [5]
-<img/PSOsphere.png, id=108, 911.65594pt x 431.36156pt>
+<img/PSOsphere.png, id=109, 911.65594pt x 431.36156pt>
 File: img/PSOsphere.png Graphic file (type png)
 <use img/PSOsphere.png>
-Package pdftex.def Info: img/PSOsphere.png  used on input line 257.
+Package pdftex.def Info: img/PSOsphere.png  used on input line 278.
 (pdftex.def)             Requested size: 511.12201pt x 241.84842pt.
 
-Overfull \hbox (61.36702pt too wide) in paragraph at lines 257--258
+Overfull \hbox (61.36702pt too wide) in paragraph at lines 278--279
 [][] 
  []
 
-<img/PSOackley.png, id=109, 910.90312pt x 425.33907pt>
+<img/PSOackley.png, id=110, 910.90312pt x 425.33907pt>
 File: img/PSOackley.png Graphic file (type png)
 <use img/PSOackley.png>
-Package pdftex.def Info: img/PSOackley.png  used on input line 260.
+Package pdftex.def Info: img/PSOackley.png  used on input line 281.
 (pdftex.def)             Requested size: 517.94144pt x 241.84842pt.
 
-Overfull \hbox (68.18645pt too wide) in paragraph at lines 260--261
+Overfull \hbox (68.18645pt too wide) in paragraph at lines 281--282
 [][] 
  []
 
 [6 <./img/PSOsphere.png>]
-<img/Fireflysphere.png, id=114, 910.90312pt x 483.30562pt>
+<img/Fireflysphere.png, id=116, 910.90312pt x 483.30562pt>
 File: img/Fireflysphere.png Graphic file (type png)
 <use img/Fireflysphere.png>
-Package pdftex.def Info: img/Fireflysphere.png  used on input line 264.
+Package pdftex.def Info: img/Fireflysphere.png  used on input line 285.
 (pdftex.def)             Requested size: 643.53502pt x 341.43306pt.
 
-Overfull \hbox (193.78003pt too wide) in paragraph at lines 264--265
+Overfull \hbox (193.78003pt too wide) in paragraph at lines 285--286
 [][] 
  []
 
 [7 <./img/PSOackley.png>]
-<img/Fireflyackley.png, id=119, 910.90312pt x 467.49657pt>
+<img/Fireflyackley.png, id=121, 910.90312pt x 467.49657pt>
 File: img/Fireflyackley.png Graphic file (type png)
 <use img/Fireflyackley.png>
-Package pdftex.def Info: img/Fireflyackley.png  used on input line 267.
+Package pdftex.def Info: img/Fireflyackley.png  used on input line 288.
 (pdftex.def)             Requested size: 637.58614pt x 327.20668pt.
 
-Overfull \hbox (187.83115pt too wide) in paragraph at lines 267--268
+Overfull \hbox (187.83115pt too wide) in paragraph at lines 288--289
 [][] 
  []
 
@@ -1117,18 +1108,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24851 strings out of 475071
- 481210 string characters out of 5754465
- 864762 words of memory out of 5000000
- 45771 multiletter control sequences out of 15000+600000
- 475637 words of font info for 49 fonts, out of 8000000 for 9000
+ 24860 strings out of 475071
+ 481311 string characters out of 5751471
+ 864912 words of memory out of 5000000
+ 45778 multiletter control sequences out of 15000+600000
+ 475974 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,6n,91p,1507b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb>
-Output written on report.pdf (11 pages, 280828 bytes).
+ 86i,6n,91p,1498b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/opt/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on report.pdf (11 pages, 289780 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 218 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
  219 words of extra memory for PDF output out of 10000 (max. 10000000)
 

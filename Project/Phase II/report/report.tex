@@ -165,7 +165,10 @@ irem nesse sentido. À medida que vão andando vão-se lembrando da sua melhor p
 posição para se dirigirem para a posição óptima. Como iniciaram em posições aleatórias no mapa ao dirigirem-se todas para o mesmo ponto inevitavelmente vão passar pelo ponto óptimo, alterando ao
 melhor global e fazendo com que todas consigam convergir nesse ponto.
 
-\includegraphics{img/PSO.png}
+\begin{center}
+  \includegraphics{img/PSO.png}
+\end{center}
+
 
 \newpage
 \section{Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}\label{sec:desc-algo}
@@ -232,7 +235,7 @@ o valor da posição para a enésima dimensão.
  \subsection{Análise comparativamente a PSO}
 O algoritmo Firefly compartilha muitas semelhanças com 
 algoritmos SI, como PSO.
-Parece ser mais eficaz na otimização multiobjetivo. 
+
 O algoritmo Firefly tem cinco regras baseadas nas propriedades 
 piscantes dos pirilampos reais:
 \begin{enumerate}
@@ -242,14 +245,32 @@ piscantes dos pirilampos reais:
   \item À medida que a distância entre dois vaga-lumes aumenta, o brilho visível de um determinado vaga-lume para o outro diminui. 
   \item Se um vaga-lume não vê nenhum vaga-lume que seja mais brilhante do que ele, ele se move aleatoriamente. 
 \end{enumerate}
-\subsubsection{Vantagens }\label{sec:apre-da-org}
-\subsubsection{Desvantagens}\label{sec:apre-da-org}
+\subsubsection{Vantagens }\label{sec:vantagens}
+\begin{itemize}
+  \item Parece ser mais eficaz na otimização multiobjetivo e em curto tempo.
+  \item É melhor em problemas não lineares com ruído.
+  \item Fácil de implementar.
+  \item Bom a resolver problemas com poucos Local optimum.
+\end{itemize}
 
+\subsubsection{Desvantagens}\label{sec:desvantagens}
+\begin{itemize}
+  \item Tem uma convergência baixa.
+  \item Fica preso em problemas com muitos de Local optimum.
+  \item Os parametros do algoritmo são fixos e não mudam com o tempo de computação.
+  \item Não memoriza de qualquer história de melhor
+  situação para firefly e isso faz com que eles se movam
+  independentemente de sua melhor situação anterior, podendo
+  acabam perdendo as suas situações.
+\end{itemize}
 \newpage
 \section{Análsie de desempenho}\label{sec:an-do-desem}
 
 \subsection{Algoritmo função esfera }\label{sec:apre-da-org}
-\subsection{Algoritmo função Ackley }\label{sec:apre-da-org}
+\subsection{Algoritmo função Ackley }\label{sec:alg-Ackley}
+\begin{equation}
+  f(x) = -aexp(-b\sqrt{\frac{1}{d}\sum_{i = 1}^{d}x^2_i}) - exp(\frac{1}{d}\sum_{i = 1}^{d}\cos(cx_i)) + a + exp(1)
+\end{equation}
 
 \subsection{Resultados}\label{sec:comp-PSO}
 \subsection{PSO}\label{sec:comp-PSO}
