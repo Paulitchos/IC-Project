@@ -225,13 +225,7 @@ entre dois pirilampos no espaço D-dimensional é dado como:
 \end{equation}
 onde xi e xj são os vetores de posição para firefly e , respectivamente, com representação
 o valor da posição para a enésima dimensão.
-
-
- .......isto tem continuacao....
-    ou encontrar um exemplo do funcionamento do firefly
     
-    
-
  \subsection{Análise comparativamente a PSO}
 O algoritmo Firefly compartilha muitas semelhanças com 
 algoritmos SI, como PSO.
@@ -265,29 +259,93 @@ piscantes dos pirilampos reais:
 \end{itemize}
 \newpage
 \section{Análsie de desempenho}\label{sec:an-do-desem}
-
-\subsection{Algoritmo função esfera }\label{sec:apre-da-org}
 \subsection{Algoritmo função Ackley }\label{sec:alg-Ackley}
 \begin{equation}
   f(x) = -aexp(-b\sqrt{\frac{1}{d}\sum_{i = 1}^{d}x^2_i}) - exp(\frac{1}{d}\sum_{i = 1}^{d}\cos(cx_i)) + a + exp(1)
 \end{equation}
 
-\subsection{Resultados}\label{sec:comp-PSO}
-\subsection{PSO}\label{sec:comp-PSO}
+\subsection{PSO}\label{sec:PSO-res}
 \subsubsection{Sphere}\label{sec:comp-PSO:center}
-    \includegraphics[height=8.5cm]{img/PSOsphere.png}
-\subsubsection{Ackley}\label{sec:comp-PSO}
+\begin{center}
+  \includegraphics[height=8.5cm]{img/PSOsphere.png}
+\end{center}
+    Notámos que para ambos os casos os parametros iniciais
+    foram os melhores. Ao aumentar o parametro cognitivo obtiamos
+    relativamente maior custo, enquanto o aumento do parametro
+    social causava "pouca" diferença no custo. O parametro que
+    mais afetou o custo foi a inércia, com o seu aumentos o
+    custo teve um aumento bastante elevado que era de esperar
+    pois a a aceleração a partícula anterior tem bastante impacto
+    da maneira com é obtida a melhor posição.
+
+\subsubsection{Ackley}\label{sec:PSO-Ackley}
+\begin{center}
   \includegraphics[height=8.5cm]{img/PSOackley.png}
+\end{center}
+O mesmo se verifica em Ackley, em que o parametro
+cognitivo tive um ligeiro impacto no custo em ambos os casos 
+e o parametro social não teve impacto nenhum.
+Novamente a aceleração da partícula anterior teve o maior
+impacto no custo.
 
-\subsection{Firefly}\label{sec:comp-PSO}
-\subsubsection{Sphere}\label{sec:comp-PSO}
+\subsection{Firefly}\label{sec:fire-res}
+\subsubsection{Sphere}\label{sec:fire-sphere}
+\begin{center}
   \includegraphics[height=12cm]{img/Fireflysphere.png}
+\end{center}
+Para o FA já temos mais parametros para alterar e com isso temos
+maior rumo para experimentar várias variações de parametros.
+Fazendo comparação com os valores default:
+
+O ligeiro aumento do Csi(atração mútua) aumentava o custo em dimensão 2
+, mas verifica-se a sua diminuição em dimensão 3 e onde se obteve melhor resultado. 
+A alteração do Psi(coeficiente de absorção de luz) causava ligeiras diminuições
+no custo para dimensão 2 e ligeiro aumento para dimensão 3.
+
+Infelizmente não alterámos os outros parametros devido a ser bastante pesado
+e o tempo de computação era elavado, então experimentámos aumentar
+consideralvelmente Csi. E foi assim que obtivemos o melhor valor em dimensão
+2 o que foi supreendente consideranto que antes tinha aumentado, e o aumento
+na dimensão 3 que antes tinha causado o seu menor custo.
+
 
 \subsubsection{Ackley}\label{sec:comp-PSO}
+\begin{center}
   \includegraphics[height=11.5cm]{img/Fireflyackley.png}
+\end{center}
+Em Ackley obteve-se diferentes resultados, em que aumentar Csi
+causou diminuição em ambos os casos principalmente em dimensão
+3 que o seu custo passou a ser negativo. o aumento do Psi
+casou aumento do custo em ambos os casos.
+E seguimos a mesma filosofia que na sphere e aumentando bastante
+o Csi verificamos o aumento de custo em dimensão 2 mas novamente uma
+grande alteração no custo de dimensão 3 o que demonstra que a atração
+é o parametro com grande impacto numa dimensão maior.
+
+\newpage
 
 \section{Conclusões}\label{sec:an-da-info-fin-da-org}
-  Podemos observar pelos gráficos acima que os valores obtidos pelo algoritmo Firefly são melhores (menor custo).
+  Podemos observar pelos gráficos acima que os valores
+  obtidos pelo algoritmo PSO são melhores 
+  (menor custo) em quase tudo para este caso de problema.
+  O único custo que se destacou de FA foi em dimensão 3 em Ackley
+  em que obtivemos valores negativos no custo.
+
+  Apesar de nas pequisas que efetuamos já muitos casos
+  se verificam que o FA é um algoritmo que traz melhores resultados
+  em curto tempo e que já existem versões modificadas para
+  dar mais liberdade ainda ao algoritmo.
+
+  Esperemos com este relatório percebe-se como Firefly
+  Algorithm funcione, e utilizações que possa ter para resolver
+  diversos problemas.
+  
+  Com esta análise final foi ilustrar as diferenças 
+  que tem perante o PSO em termos de vantagens, desvantagens
+  e resultados perante o mesmo problema.
+
+
+
 
 \vspace{1cm}
 
@@ -295,6 +353,7 @@ piscantes dos pirilampos reais:
 \bibliographystyle{ieeetr}
 \bibliography{refs}
 \nocite{FirePso}
+\nocite{Firefly_par}
 
 %===========================================================
 
