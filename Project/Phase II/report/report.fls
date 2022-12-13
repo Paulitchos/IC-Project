@@ -1005,6 +1005,10 @@ INPUT ./img/Fireflyackley.png
 INPUT img/Fireflyackley.png
 INPUT ./img/Fireflyackley.png
 INPUT ./img/Fireflyackley.png
+INPUT ./report.bbl
+INPUT report.bbl
+INPUT ./report.bbl
+INPUT report.bbl
 INPUT report.aux
 INPUT /opt/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.1)  13 DEC 2022 03:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.1)  13 DEC 2022 03:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1071,10 +1071,10 @@ Overfull \hbox (61.36702pt too wide) in paragraph at lines 278--279
 <img/PSOackley.png, id=110, 910.90312pt x 425.33907pt>
 File: img/PSOackley.png Graphic file (type png)
 <use img/PSOackley.png>
-Package pdftex.def Info: img/PSOackley.png  used on input line 281.
+Package pdftex.def Info: img/PSOackley.png  used on input line 280.
 (pdftex.def)             Requested size: 517.94144pt x 241.84842pt.
 
-Overfull \hbox (68.18645pt too wide) in paragraph at lines 281--282
+Overfull \hbox (68.18645pt too wide) in paragraph at lines 280--281
 [][] 
  []
 
@@ -1082,10 +1082,10 @@ Overfull \hbox (68.18645pt too wide) in paragraph at lines 281--282
 <img/Fireflysphere.png, id=116, 910.90312pt x 483.30562pt>
 File: img/Fireflysphere.png Graphic file (type png)
 <use img/Fireflysphere.png>
-Package pdftex.def Info: img/Fireflysphere.png  used on input line 285.
+Package pdftex.def Info: img/Fireflysphere.png  used on input line 284.
 (pdftex.def)             Requested size: 643.53502pt x 341.43306pt.
 
-Overfull \hbox (193.78003pt too wide) in paragraph at lines 285--286
+Overfull \hbox (193.78003pt too wide) in paragraph at lines 284--285
 [][] 
  []
 
@@ -1093,33 +1093,31 @@ Overfull \hbox (193.78003pt too wide) in paragraph at lines 285--286
 <img/Fireflyackley.png, id=121, 910.90312pt x 467.49657pt>
 File: img/Fireflyackley.png Graphic file (type png)
 <use img/Fireflyackley.png>
-Package pdftex.def Info: img/Fireflyackley.png  used on input line 288.
+Package pdftex.def Info: img/Fireflyackley.png  used on input line 287.
 (pdftex.def)             Requested size: 637.58614pt x 327.20668pt.
 
-Overfull \hbox (187.83115pt too wide) in paragraph at lines 288--289
+Overfull \hbox (187.83115pt too wide) in paragraph at lines 287--288
 [][] 
  []
 
-[8 <./img/Fireflysphere.png>]
-No file report.bbl.
-[9 <./img/Fireflyackley.png>] (./report.aux)
+[8 <./img/Fireflysphere.png>] (./report.bbl) [9 <./img/Fireflyackley.png>] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24860 strings out of 475071
- 481311 string characters out of 5751471
- 864912 words of memory out of 5000000
- 45778 multiletter control sequences out of 15000+600000
+ 24865 strings out of 475071
+ 481364 string characters out of 5751471
+ 864941 words of memory out of 5000000
+ 45779 multiletter control sequences out of 15000+600000
  475974 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,6n,91p,1498b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (11 pages, 289780 bytes).
+Output written on report.pdf (11 pages, 290163 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 500000)
+ 274 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
  219 words of extra memory for PDF output out of 10000 (max. 10000000)
 
