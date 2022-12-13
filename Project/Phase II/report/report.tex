@@ -169,15 +169,14 @@ melhor global e fazendo com que todas consigam convergir nesse ponto.
 
 \newpage
 \section{Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}\label{sec:desc-algo}
-
-\subsection{FireFly}\label{sec:FireFly}
-A maioria das espécies de vaga-lumes são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
-dos flashes é atrair vaga-lumes do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
-predador que um vaga-lume tem um gosto amargo.
-
 \subsection{Firefly algorithm}
+
+A maioria das espécies de pirilampos são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
+dos flashes é atrair pirilampo do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
+predador que um pirilampo tem um gosto amargo.
+
 Com base nas propriedades piscantes das espécies de 
-pirilampos, Xin-She Yang [148,149] desenvolveu o 
+pirilampos, Xin-She Yang desenvolveu o 
 Firefly Algorithm (FA) em 2008. Um sistema não linear que 
 combina o decaimento exponencial da absorção de luz e lei do 
 inverso do quadrado da variação de luz usa a distância. 
@@ -200,10 +199,37 @@ Como o brilho dos pirilampos está relacionado à paisagem
 objetiva usando sua posição como índice, a atratividade dos 
 pirilampos vistos por outros depende de sua posição relativa
 e brilho relativo. Portanto, a beleza está nos olhos de quem vê.
-Portanto, comparações pareadas são necessárias para 
+Portanto, comparações vinculadas são necessárias para 
 comparar todos os pirilampos.
 
-\subsection{Análise comparativamente a PSO}
+
+Para iniciar o algoritmo, os pirilampos são colocados em locais aleatórios. A localização de um pirilampo
+corresponde aos valores dos parâmetros da função objetivo a ser resolvida. Para
+função de três variáveis, a posição do pirilampo seria fácil de visualizar no espaço 3-D,
+Considerando que com uma função de dez variáveis seria uma tarefa muito mais difícil encontrar um
+visualização. Então, a partir da posição recém-adquirida de cada pirilampo, a função objetivo é
+avaliada, e a intensidade da luz do pirilampo é definida como a avaliação inversa. O inverso é usado
+pois o objetivo é minimizar a função objetivo. Assim, uma avaliação de função inferior resultará
+em maior intensidade de luz. 
+Após a inicialização, cada pirilampo é comparado com todos os outros e se moverá em direção
+cada pirilampo mais brilhante encontrado. Uma vez que um pirilampo tenha determinado que precisa se mover em direção a um
+pirilampo mais brilhante, várias coisas têm que acontecer. Primeiro, a distância entre os pirilampos, r, tem que
+ser calculado. Qualquer forma de cálculo de distância que faça sentido para o problema dado pode ser
+usado, mas para o caso geral a distância cartesiana é apropriada. A distância cartesiana
+entre dois pirilampos no espaço D-dimensional é dado como:
+\begin{equation}
+  rij = \sqrt{\sum_{d=1}^{D} (xid -xjd)^2}
+\end{equation}
+onde xi e xj são os vetores de posição para firefly e , respectivamente, com representação
+o valor da posição para a enésima dimensão.
+
+
+ .......isto tem continuacao....
+    ou encontrar um exemplo do funcionamento do firefly
+    
+    
+
+ \subsection{Análise comparativamente a PSO}
 O algoritmo Firefly compartilha muitas semelhanças com 
 algoritmos SI, como PSO.
 Parece ser mais eficaz na otimização multiobjetivo. 
@@ -216,16 +242,32 @@ piscantes dos pirilampos reais:
   \item À medida que a distância entre dois vaga-lumes aumenta, o brilho visível de um determinado vaga-lume para o outro diminui. 
   \item Se um vaga-lume não vê nenhum vaga-lume que seja mais brilhante do que ele, ele se move aleatoriamente. 
 \end{enumerate}
+\subsubsection{Vantagens }\label{sec:apre-da-org}
+\subsubsection{Desvantagens}\label{sec:apre-da-org}
 
 \newpage
 \section{Análsie de desempenho}\label{sec:an-do-desem}
 
-\subsection{Aplicar e ilustrar ao algoritmo para otimização de duas funções “benchmark” a função esfera (para dimensão 2 e 3) e função de Ackley (para dimensão 2 e 3). }\label{sec:apre-da-org}
+\subsection{Algoritmo função esfera }\label{sec:apre-da-org}
+\subsection{Algoritmo função Ackley }\label{sec:apre-da-org}
 
-\subsection{Comparar com a versão base do PSO e analisar a sensibilidade aos diferentes parâmetros do algoritmo, apresentando tabela 
-com resultados.}\label{sec:comp-PSO}
+\subsection{Resultados}\label{sec:comp-PSO}
+\subsection{PSO}\label{sec:comp-PSO}
+\subsubsection{Sphere}\label{sec:comp-PSO:center}
+    \includegraphics[height=8.5cm]{img/PSOsphere.png}
+
+\subsubsection{Ackley}\label{sec:comp-PSO}
+  \includegraphics[height=8.5cm]{img/PSOackley.png}
+
+\subsection{Firefly}\label{sec:comp-PSO}
+\subsubsection{Sphere}\label{sec:comp-PSO}
+  \includegraphics[height=12cm]{img/Fireflysphere.png}
+
+\subsubsection{Ackley}\label{sec:comp-PSO}
+  \includegraphics[height=11.5cm]{img/Fireflyackley.png}
 
 \section{Conclusões}\label{sec:an-da-info-fin-da-org}
+  Podemos observar pelos gráficos acima que os valores obtidos pelo algoritmo Firefly são melhores (menor custo).
 
 \vspace{1cm}
 

@@ -1,14 +1,6 @@
 mudar parametros a partir do numero de iteracoes no firefly
 
 
-Algoritmo do Vaga-lumes ou Firefly Algorithm: ́E uma t ́ecnica baseada na busca por
-alimento dos vaga-lumes, segundo a qual os indiv ́ıduos emitem brilhos progressi-
-vamente mais intensos `a medida em que se aproximam do objetivo, atraindo seus
-semelhantes. De maneira simpl ́oria, a solu ̧c ̃ao da fun ̧c ̃ao objetivo  ́e diretamente pro-
-porcional a distˆancia do resultado desejado (SUNDARESWARAN; PEDDAPATI;
-PALANI, 2014).
-
-
 
 M ́etodo de Otimiza ̧c ̃ao por Vaga-lumes (Firefly Algorithm - FA)
 O algoritmo de vaga-lumes ou FA  ́e um m ́etodo inspirado na luminescˆencia de
