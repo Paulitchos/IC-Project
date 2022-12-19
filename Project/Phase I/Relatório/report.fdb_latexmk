@@ -6,8 +6,13 @@
   (generated)
   "report.bbl"
   "report.blg"
+<<<<<<< Updated upstream
 ["pdflatex"] 1668444027 "c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex" "report.pdf" "report" 1668444033
   "c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex" 1668444016 12282 c2f8c323ee70c8e650c32031c4d70190 ""
+=======
+["pdflatex"] 1668428828 "c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex" "report.pdf" "report" 1668428828
+  "c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex" 1668428811 9826 8449b03180550f88d04dbc0f6ddd5fb9 ""
+>>>>>>> Stashed changes
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1664466946 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1664468694 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1664467959 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -193,10 +198,17 @@
   "img/Binance.png" 1668444016 2469 c96af506defb0082465a6e125e155a13 ""
   "img/Pytorch.png" 1668444016 24056 0a21b33ffee86ba059da6999b6842610 ""
   "img/logo-isec-transparente.png" 1668353606 25982 c1f7fc3b9b81683beaeb487ae5794a15 ""
+<<<<<<< Updated upstream
   "report.aux" 1668444032 6182 2444c0218d0ec156fe8a8e3d2a3e8ca8 "pdflatex"
   "report.bbl" 1668444027 525 ea41094848808ad86e75279205de0716 "bibtex report"
   "report.tex" 1668444016 12282 c2f8c323ee70c8e650c32031c4d70190 ""
   "report.toc" 1668444032 852 34b5364dc9b65679c5628590aabaf95c "pdflatex"
+=======
+  "report.aux" 1668428828 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "report.bbl" 0 -1 0 "bibtex report"
+  "report.tex" 1668428811 9826 8449b03180550f88d04dbc0f6ddd5fb9 ""
+  "report.toc" 0 -1 0 "pdflatex"
+>>>>>>> Stashed changes
   (generated)
   "report.aux"
   "report.log"

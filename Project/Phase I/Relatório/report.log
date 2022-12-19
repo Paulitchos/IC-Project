@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.29)  14 NOV 2022 16:40
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.29)  14 NOV 2022 12:27
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1021,7 +1025,8 @@ Package pdftex.def Info: img/logo-isec-transparente.png  used on input line 42.
 (pdftex.def)             Requested size: 258.36668pt x 52.9796pt.
 [1
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/logo-isec-transparente.png>] (./report.toc)
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/logo-isec-transparente.png>]
+No file report.toc.
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
@@ -1035,6 +1040,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.119 \newpage
+<<<<<<< Updated upstream
                [1] [2] [3] [4] [5] [6] (./report.bbl
 <img/Binance.png, id=96, 213.79875pt x 120.45pt>
 File: img/Binance.png Graphic file (type png)
@@ -1066,4 +1072,143 @@ PDF statistics:
  157 compressed objects within 2 object streams
  47 named destinations out of 1000 (max. 500000)
  100 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+               [1] [2] [3] [4]
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:273: Missing $ inserted.
+<inserted text> 
+                $
+l.273 ...\item Nome - network MSE 1Lay 256 Tanh 9_
+                                                  04E 05.tar
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:274: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.274       \item
+                  Função de Treino - MSE
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:274: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.274       \item F
+                   unção de Treino - MSE
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:274: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.274       \item F
+                   unção de Treino - MSE
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 274.
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:274: Please use \mathaccent for accents in math mode.
+<recently read> \accent 
+                        
+l.274       \item Funç
+                       ão de Treino - MSE
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 274.
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:274: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.274       \item Funçã
+                         o de Treino - MSE
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:275: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.275       \item
+                  Função de Ativação - Tanh
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:275: Missing $ inserted.
+<inserted text> 
+                $
+l.275       \item F
+                   unção de Ativação - Tanh
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:275: Missing } inserted.
+<inserted text> 
+                }
+l.275       \item F
+                   unção de Ativação - Tanh
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/NunoS/Ambiente de Trabalho/GitHub/IC-Project/Project/Phase I/Relatório/report.tex:275: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.275       \item F
+                   unção de Ativação - Tanh
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[5] [6]
+No file report.bbl.
+
+LaTeX Warning: Citation `Binance_2021' undefined on input line 307.
+
+[7] (./report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 24785 strings out of 475075
+ 479303 string characters out of 5783001
+ 863754 words of memory out of 5000000
+ 45713 multiletter control sequences out of 15000+600000
+ 474524 words of font info for 46 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 86i,9n,91p,772b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on report.pdf (9 pages, 125464 bytes).
+PDF statistics:
+ 158 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> Stashed changes
 
