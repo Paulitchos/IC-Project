@@ -138,5 +138,5 @@ plt.show()
 #animation = plot_contour(pos_history=optimizer.pos_history,mesher=m,mark=(0,0))
 #Enables us to view it in a Jupyter notebook
 #animation.save('Pyramid4.gif',writer='imagemagick',fps=10)
-#Image(url='Pyramid4.gif')
+#Image(url='Pyramid4.gif')  
 

@@ -1,0 +1,361 @@
+\documentclass[10pt]{article}
+
+\PassOptionsToPackage{hidelinks}{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, calc, xcolor}
+\usepackage{alphabeta} 
+\usepackage[pdftex]{graphicx}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[]{bookmark}
+\linespread{1.06}
+\setlength{\parskip}{8pt plus2pt minus2pt}
+
+\widowpenalty 10000
+\clubpenalty 10000
+
+\newcommand{\eat}[1]{}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage[official]{eurosym}
+\usepackage{enumitem}
+\setlist{nolistsep,noitemsep}
+\usepackage[]{hyperref}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{lipsum}
+\usepackage{indentfirst}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,shapes.symbols,chains}
+\usepackage{xcolor,colortbl}
+\usepackage{array}
+
+\setlength{\parindent}{2em}
+\renewcommand*\contentsname{Índice}
+\renewcommand\refname{}
+
+\begin{document}
+
+%===========================================================
+\begin{titlepage}
+\begin{center}
+
+% Top 
+\includegraphics[width=0.55\textwidth]{img/logo-isec-transparente.png}~\\[2cm]
+
+
+% Title
+\HRule \\[0.4cm]
+{ \LARGE 
+  \textbf{Inteligência Computacional}\\[0.4cm]
+}
+\HRule \\[1.5cm]
+
+% Docente
+{ \large
+  \textbf{Docente} \\[0.1cm]
+  Inês Dominguês \\ Carlos Pereira \\[2.5cm]
+}
+
+
+% Author
+{ \large
+  \textbf{Alunos} \\[0.1cm]
+  Paulo Henrique Figueira Pestana de Gouveia - a2020121705 \\[0.1cm]
+  Nuno Alexandre Almeida Santos - a2019110035\\[0.1cm]
+}
+
+\vfill
+
+
+
+% Bottom
+{\large \today}
+ 
+\end{center}
+\end{titlepage}
+
+
+\newpage
+
+
+
+%===========================================================
+\tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\newpage
+\setcounter{page}{1}
+
+%===========================================================
+%===========================================================
+\large
+\section{Introdução}\label{sec:intro}
+
+\section{Em que consiste a Computação Evolucionária?}\label{sec:comp-evo}
+    A evolução é um processo de otimização em que o objetivo é melhorar a capacidade de um organismo (ou sistema) sobreviver em ambientes dinâmicos e competitivos.
+    Ao falar sobre evolução, é importante primeiro identificar a área em que a evolução pode ser definida, por exemplo, cósmica, química, estelar e planetária,
+sistemas de evolução orgânicos ou feitos pelo homem. Para essas diferentes áreas, a evolução pode
+ser interpretado de forma diferente. 
+    
+A Computação Evolucionária compreende um conjunto de técnicas de busca e otimização inspiradas na 
+evolução natural das espécies. Desta forma, cria-se uma população de indivíduos que vão reproduzir e 
+competir pela sobrevivência. Os melhores sobrevivem e transferem suas características a novas gerações.
+
+
+\subsection{Descrição do paradigma de computação evolucionária e possíveis aplicações no contexto de treino de uma rede neuronal}\label{sec:desc-para}
+
+Sistemas de CE resolvem problemas por meio de população, 
+tentativa e erro, metaheurística ou otimização estocástica. Um 
+conjunto inicial de candidatos a solução é gerado e 
+atualizado iterativamente: remoção das 
+soluções menos desejadas, inserção de ruído.
+
+Em termos técnicos, as populações de solução evoluem e 
+se adaptam à medida que estão sujeitas à seleção e mutação 
+naturais ou artificiais. Ou seja, melhor ajuste (a função 
+quantifica o  quão adaptável/desejável é a solução). 
+A CE é popular na IC porque leva a soluções otimizadas 
+em uma ampla variedade de contextos, e há 
+muitas variantes e extensões para problemas e 
+estruturas de dados específicos.
+
+No contexto de redes neuronais, a computação evolutiva pode 
+ser aplicada a soluções dadas enquanto treina a rede. 
+No exemplo de classificação de forma geométrica usando CE, 
+a solução evolui através de seleção e mutação natural
+ou artificial à medida que a rede é treinada.
+Isso nos permite generalizar a forma com mais precisão com o 
+auxílio de descartar soluções menos desejáveis.
+
+\newpage
+\section{Inteligência Swarm}\label{sec:ev-da-org}
+Conjunto estruturado de indivíduos (ou agentes) que interagem entre si.
+Os Indivíduos pertencentes ao swarm (enxame) interagem para atingirem um objectivo comum,
+de forma mais eficiente do que agindo individualmente.
+
+Formalmente, um enxame pode ser definido como um grupo de agentes (geralmente móveis) que se comunicam entre si (seja direta ou indiretamente), agindo no seu ambiente local.
+ Mais formalmente, inteligência Swarm é a propriedade de um sistema pelo qual os comportamentos coletivos de agentes não sofisticados interagindo localmente com seu ambiente causam o surgimento de padrões funcionais globais coerentes.
+ O objetivo dos modelos computacionais de inteligência Swarm é modelar o simples
+comportamento dos indivíduos e as interações locais com o ambiente e os indivíduos vizinhos, a fim de obter comportamentos mais complexos que podem ser usados para resolver problemas complexos, principalmente problemas de otimização.
+
+Inteligência Swarm faz uso de algoritmos de convergência baseados em fenômenos emergentes da natureza como: colônias de insetos, estratégias coletivas de peixes e pássaros e ainda comportamento auto-organizativo de partículas atômicas e subatômicas.
+
+Por outro lado, a otimização de colônia de formigas modela o comportamento muito simples de seguir a trilha de feromônio das formigas, onde cada formiga percebe as concentrações de feromônio em sua
+ambiente local e age selecionando probabilisticamente a direção com maior
+concentração de feromônio. Daí surge o comportamento de encontrar a melhor alternativa (caminho mais curto) a partir de uma coleção de alternativas. Modelos do comportamento local de
+formigas que frequentam cemitérios resultam no comportamento complexo de agrupar objetos semelhantes
+em clusters.
+
+\subsection{PSO}\label{sec:PSO}
+O algoritmo de otimização de enxame de partículas (PSO) é um algoritmo de pesquisa baseado em população baseado na simulação do comportamento social de pássaros dentro de um bando, que são denominados por partículas. Esse método se inicializa aleatoriamente, através de um conjunto de partículas com velocidades e posições aleatórias. Após essa inicialização os indivíduos são avaliados através da função de avaliação. Em um algoritmo PSO existe um conjunto de vetores cujas trajetórias oscilam em torno de uma região definida por cada melhor posição individual (PBEST) e a melhor posição dos outros (GBEST).
+
+A posição da partícula, xi, vai sendo atualizada de acordo com a equação:
+\begin{equation}
+  \vspace{1cm}
+    x_i (t+1) = x_i (t) + w.v_i(t) + C1.rnd(PBEST ‐ x_i (t)) + C2.rnd(GBEST ‐ x_i (t))
+\end{equation}
+Na equação (1), vi(t) representa o vetor velocidade da partícula i no tempo t, w é o fator de inércia, rnd representa números aleatórios de distribuição uniforme entre 0‐1, C1 e C2 representam respectivamente os parâmetros social e cognitivo, PBEST é a melhor posição individual e GBEST é a melhor posição social. Os parâmetros C1 e C2 ajustam o balanço entre a influência social e a aprendizagem da partícula individual.
+
+Algoritmo de otimização de enxame de partículas (PSO) modela dois comportamentos simples:  cada indivíduo (1) se move em direção seu melhor vizinho mais próximo e  (2) retorna ao estado que o indivíduo experimentou ser o melhor para si mesmo. Como resultado, o comportamento coletivo que emerge é que
+de todos os indivíduos convergindo para o estado ambiental que é melhor para todos os indivíduos.
+
+Exempo:
+
+Uma forma mais simples de explicação pode ser um bando de gaivotas telepáticas à procura da melhor fonte de comida. Todas começam num mapa distribuídas aleatoriamente, no inicio antes de se moverem têm velocidade
+zero mas sabem qual a gaivota mais próximo da solução ótima, alteram então a sua velocidade e direcção para
+irem nesse sentido. À medida que vão andando vão-se lembrando da sua melhor posição, usam a sua velocidade actual, a sua melhor posição e a melhor posição global para alterarem a sua velocidade e logo a sua
+posição para se dirigirem para a posição óptima. Como iniciaram em posições aleatórias no mapa ao dirigirem-se todas para o mesmo ponto inevitavelmente vão passar pelo ponto óptimo, alterando ao
+melhor global e fazendo com que todas consigam convergir nesse ponto.
+
+\begin{center}
+  \includegraphics{img/PSO.png}
+\end{center}
+
+
+\newpage
+\section{Descrição em detalhe do "Firefly algorithm" e análise comparativamente com a versão base, o PSO.}\label{sec:desc-algo}
+\subsection{Firefly algorithm}
+
+A maioria das espécies de pirilampos são capazes de brilhar produzindo flashes curtos. Considera-se que a principal função 
+dos flashes é atrair pirilampo do sexo oposto e potenciais presas. Além disso, um flash de sinal pode comunicar a um 
+predador que um pirilampo tem um gosto amargo.
+
+Com base nas propriedades piscantes das espécies de 
+pirilampos, Xin-She Yang desenvolveu o 
+Firefly Algorithm (FA) em 2008. Um sistema não linear que 
+combina o decaimento exponencial da absorção de luz e lei do 
+inverso do quadrado da variação de luz usa a distância. 
+Em FA, a principal equação algorítmica para a posição é xi 
+(como o vetor de solução do problema) é:
+\begin{equation}
+  x_i^{t+1} = x_i^t + \beta_0e^{-\gamma r^2_{ij}}(x_j^t - x_i^t) + \alpha \epsilon_i^t
+\end{equation}
+
+onde \(\alpha\) é um fator de escala que controla o tamanho 
+do passo do passeio aleatório e \gamma é um parâmetro 
+dependente de escala que controla a visibilidade do pirilampo
+(e o modo de busca). Além disso \(\beta_0\) é a constante 
+gravitacional quando a distância entre dois pirilampos é zero
+(ou seja, \(r_{ij} = 0\)). Este sistema é um sistema não 
+linear que leva a recursos ricos em termos de comportamento 
+algorítmico.
+
+Como o brilho dos pirilampos está relacionado à paisagem 
+objetiva usando sua posição como índice, a atratividade dos 
+pirilampos vistos por outros depende de sua posição relativa
+e brilho relativo. Portanto, a beleza está nos olhos de quem vê.
+Portanto, comparações vinculadas são necessárias para 
+comparar todos os pirilampos.
+
+Um exemplo de um problema que pode ser resolvido usando o 
+algoritmo de vaga-lumes é o problema do vendedor viajante (TSP). 
+No TSP, um vendedor deve visitar um número de cidades na rota mais
+curta possível, visitando cada cidade apenas uma vez e retornando
+à cidade de origem. O algoritmo de vaga-lumes pode ser usado 
+para encontrar a rota ótima para o vendedor seguir, simulando 
+o comportamento de vaga-lumes, onde o brilho de cada vaga-lume 
+corresponde à qualidade da solução que ele representa. Os 
+vaga-lumes se movem em direção aos vaga-lumes mais brilhantes, 
+e a solução com o maior brilho (menor distância total) é 
+retornada como a solução ótima.
+
+\newpage
+\subsection{Análise comparativamente a PSO}
+O algoritmo Firefly compartilha muitas semelhanças com 
+algoritmos SI, como PSO.
+
+O algoritmo Firefly tem cinco regras baseadas nas propriedades 
+piscantes dos pirilampos reais:
+\begin{enumerate}
+  \item Todos os vaga-lumes são capazes de se atrair independentemente do sexo; 
+  \item A atratividade de um vaga-lume para outros indivíduos é proporcional ao seu brilho. 
+  \item Vaga-lumes menos atraentes se movem na direção do mais atraente. 
+  \item À medida que a distância entre dois vaga-lumes aumenta, o brilho visível de um determinado vaga-lume para o outro diminui. 
+  \item Se um vaga-lume não vê nenhum vaga-lume que seja mais brilhante do que ele, ele se move aleatoriamente. 
+\end{enumerate}
+\subsubsection{Vantagens }\label{sec:vantagens}
+\begin{itemize}
+  \item Parece ser mais eficaz na otimização multiobjetivo e em curto tempo.
+  \item É melhor em problemas não lineares com ruído.
+  \item Fácil de implementar.
+  \item Bom a resolver problemas com poucos Local optimum.
+\end{itemize}
+
+\subsubsection{Desvantagens}\label{sec:desvantagens}
+\begin{itemize}
+  \item Tem uma convergência baixa.
+  \item Fica preso em problemas com muitos de Local optimum.
+  \item Os parametros do algoritmo são fixos e não mudam com o tempo de computação.
+  \item Não memoriza de qualquer história de melhor
+  situação para firefly e isso faz com que eles se movam
+  independentemente de sua melhor situação anterior, podendo
+  acabam perdendo as suas situações.
+\end{itemize}
+\newpage
+\section{Análsie de desempenho}\label{sec:an-do-desem}
+\subsection{Algoritmo função Sphere }\label{sec:alg-Sphere}
+\begin{equation}
+  f(x) = \sum_{i=1}^{\infty}(x^2)
+\end{equation}
+\subsection{Algoritmo função Ackley }\label{sec:alg-Ackley}
+\begin{equation}
+  f(x) = -aexp(-b\sqrt{\frac{1}{d}\sum_{i = 1}^{d}x^2_i}) - exp(\frac{1}{d}\sum_{i = 1}^{d}\cos(cx_i)) + a + exp(1)
+\end{equation}
+
+\subsection{PSO}\label{sec:PSO-res}
+\subsubsection{Sphere}\label{sec:comp-PSO:center}
+\begin{center}
+  \includegraphics[height=8.5cm]{img/PSOsphere.png}
+\end{center}
+Em ambos os casos, encontramos os parâmetros iniciais como ótimos.
+O aumento dos parâmetros cognitivos resultou em custos 
+relativamente mais altos, enquanto o aumento dos parâmetros 
+sociais resultou em 'pequenas' diferenças nos custos. O parâmetro 
+que mais afetou o custo foi a inércia, e aumentá-la resultou em 
+um aumento muito grande no custo. Isso era esperado porque a 
+aceleração da partícula anterior tem um grande impacto em como 
+a posição ideal é alcançada.
+
+\subsubsection{Ackley}\label{sec:PSO-Ackley}
+\begin{center}
+  \includegraphics[height=8.5cm]{img/PSOackley.png}
+\end{center}
+O mesmo pode ser visto com Ackley. Em ambos os casos, os parâmetros
+cognitivos tiveram um pequeno efeito sobre os custos e os 
+parâmetros sociais não tiveram efeito. Novamente, a aceleração 
+das partículas anteriores teve o maior impacto no custo.
+
+\subsection{Firefly}\label{sec:fire-res}
+\subsubsection{Sphere}\label{sec:fire-sphere}
+\begin{center}
+  \includegraphics[height=12cm]{img/Fireflysphere.png}
+\end{center}
+Para FA, já temos mais parâmetros para alterar, o que nos dá uma 
+direção maior  para tentar mais variações de parâmetros. Comparação
+com  valores padrão:
+
+Um leve aumento em Csi (atração mútua) aumentou o custo na 
+dimensão 2, mas uma diminuição na dimensão 3 deu-nos os melhores 
+resultados.A modificação do Psi (coeficiente de absorção óptica) 
+resultou em uma ligeira redução de custo na 2ª dimensão e um 
+ligeiro aumento na 3ª dimensão.
+
+
+Infelizmente, os outros parâmetros eram muito pesados 
+e demorados computacionalmente, então não os alteramos. 
+Portanto, experimentamos com Csi significativamente aumentado. 
+Com isso obtivemos o  valor mais alto na dimensão 2. 
+Isso é surpreendente dado os aumentos anteriores, e é o 
+aumento na dimensão 3, que anteriormente tinha o menor custo.
+
+
+\subsubsection{Ackley}\label{sec:comp-PSO}
+\begin{center}
+  \includegraphics[height=11.5cm]{img/Fireflyackley.png}
+\end{center}
+
+Ackley deu resultados diferentes. Em  ambos os casos, o aumento 
+de Csi tornou o custo negativo. 
+Em ambos os casos, o aumento do psi aumentou o custo.
+E seguimos a mesma filosofia da esfera, aumentando 
+significativamente o Csi, o que causou o custo na dimensão 2 a 
+aumentar e o custo na 3 dimensão a ficar novamente negativo.
+
+\newpage
+
+\section{Conclusões}\label{sec:an-da-info-fin-da-org}
+Podemos observar pelos gráficos acima que os valores
+obtidos pelo algoritmo PSO são melhores 
+(custo mais aproximado a 0) para este caso de problema.
+
+Na função Ackley para o algoritmo firefly, é possível um custo
+negativo porque a função inclui um termo que é o quadrado do
+negativo do valor de entrada. Isso significa que, para determinados
+valores de entrada, esse termo pode ser negativo, o que pode resultar
+em um custo total negativo para a função.
+
+Apesar de nas pequisas que efetuamos já muitos casos
+se verificam que o FA é um algoritmo que tem bom desempenho em 
+problemas com um grande número de variáveis e uma função objetiva 
+complexa e não linear. 
+Exemplos de tais problemas incluem o problema do vendedor viajante,
+o problema da mochila e o problema de otimização multiobjetivo. 
+Em geral, o falar é adequado para problemas em que o espaço de 
+solução é contínuo e a função objetiva é difícil de otimizar 
+usando métodos tradicionais, o que não é o caso aqui.
+
+Esperamos que, com este relatório, fique claro o que são o 
+PSO e o Firefly Algorithm, como eles funcionam, para que são 
+úteis e quais as diferenças entre eles. 
+\vspace{1cm}
+
+\section{Referências}\label{sec:sup-inf-utl}
+\bibliographystyle{ieeetr}
+\bibliography{refs}
+\nocite{FirePso}
+\nocite{Firefly_par}
+
+%===========================================================
+
+%===========================================================
+
+\pagebreak
+\end{document} 
