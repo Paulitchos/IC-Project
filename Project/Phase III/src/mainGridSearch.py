@@ -1,59 +1,73 @@
 # Import libraries and modules
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.preprocessing import MinMaxScaler
-import numpy as np
-import csv
-from keras.models import Sequential
-from keras.layers import Dense, Activation
-from keras.optimizers import Adam
+import csv  # for reading and writing CSV files
+import matplotlib.pyplot as plt  # for creating plots and charts
+import numpy as np  # for numerical computing with Python
+import pandas as pd  # for data manipulation and analysis
+import pathlib  # for interacting with file paths in a cross-platform manner
+import seaborn as sns  # for statistical data visualization
+import tensorflow as tf  # for machine learning and deep learning
+from keras.layers import Dense, Activation  # for building deep learning models in TensorFlow
+from keras.models import Sequential  # for building deep learning models in TensorFlow
+from keras.optimizers import Adam, RMSprop  # for building deep learning models in TensorFlow
 from keras.callbacks import History
+from sklearn.model_selection import train_test_split, GridSearchCV  # for model selection and evaluation
+from sklearn.preprocessing import MinMaxScaler  # for preprocessing data
+from tensorflow import keras  # for building deep learning models in TensorFlow
+from tensorflow.keras import layers  # for building deep learning models in TensorFlow
 from keras.wrappers.scikit_learn import KerasRegressor
-import pyswarms as ps
 
+# Print TensorFlow version
+print(tf.__version__)
 
-def create_model(camadas, neuronios, learnr, act_h,act_out):
-    # Set up model
-    model = Sequential()
-    for i in range(camadas):
-        model.add(Dense(neuronios, input_dim=8, activation=act_h))
-    model.add(Dense(1, activation=act_out))
+# Define column names for the CSV file
+column_names = ['Open Time','Open','High','Low','Close',
+                'Close Volume', 'Time', 'Quote asset volume',
+               'Number of trades', 'Taker buy base asset volume', 'Taker buy quote asset volume']
+               
 
-    # Compile model
-    model.compile(loss='mean_squared_error', optimizer=Adam(learning_rate=learnr))
+# Read in the CSV file using pandas
+raw_dataset = pd.read_csv("main.csv", names=column_names,
+                      na_values = "?", comment='\t', dtype='float',
+                      sep=",", skipinitialspace=True)
 
-    return model
+# Copy the data from the raw dataset to a new dataframe
+dataset = raw_dataset.copy()
 
-# Read data from CSV file
-x, y = [], []
+# Print the last few rows of the dataset
+dataset.tail()
 
-with open("Bitcoin Price (USD).csv") as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=';')
-    next(csv_reader)
-    for row in csv_reader:
-        y.append(float(row[4])) # Outputs
-        x.append([float(row[1]),float(row[2]),float(row[3]),float(row[5]),float(row[7]),float(row[8]),float(row[9]),float(row[10])]) # Inputs
+dataset.pop("Open Time")
+dataset.pop("Time")
+# Randomly select 80% of the rows from the dataset and store them in a new dataframe
+train_dataset = dataset.sample(frac=0.8,random_state=0)
 
-# Convert x and y to numpy arrays
-x = np.array(x)
-y = np.array(y)
+# Remove the rows in the training dataset from the original dataset, leaving the remaining rows in a new dataframe
+test_dataset = dataset.drop(train_dataset.index)
 
-# Split the data into training and testing sets
-train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.2, random_state=0)
+# Calculate statistical summary of the training dataset
+train_stats = train_dataset.describe()
 
-# Normalize training and testing data
-scaler = MinMaxScaler()
-train_x = scaler.fit_transform(train_x)
-test_x = scaler.transform(test_x)
+# Remove the "Close" column from the statistical summary
+train_stats.pop("Close")
 
-# Reshape train_y to have shape (n_samples, 1)
-train_y = train_y.reshape(-1, 1)
+# Transpose the statistical summary so that it's in a more useful shape
+train_stats = train_stats.transpose()
 
-# Normalize training and testing data
-train_y = scaler.fit_transform(train_y)
-test_y = scaler.transform(test_y.reshape(-1, 1))
+# Remove the "Close" column from the training dataset and store it in a new dataframe
+train_labels = train_dataset.pop('Close')
 
+# Remove the "Close" column from the testing dataset and store it in a new dataframe
+test_labels = test_dataset.pop('Close')
 
-#=============== Parte Grid ===============#
+scaler = MinMaxScaler(feature_range=(0, 1))
+scaler.fit(train_dataset)
+normed_train_dataset = scaler.transform(train_dataset)
+normed_test_dataset = scaler.transform(test_dataset)
+
+print(normed_train_dataset.shape)
+print(train_labels.shape)
+
+print(train_labels)
 
 param_grid = {
     'camadas': [1, 2, 3, 4],
@@ -63,13 +77,26 @@ param_grid = {
     'act_out': ['linear', 'sigmoid']
 }
 
+def create_model(camadas, neuronios, learnr, act_h,act_out):
+    # Set up model
+    model = Sequential()
+    model.add(Dense(neuronios, input_dim=8, activation=act_h))
+    for i in range(camadas):
+        model.add(Dense(neuronios,activation=act_h))
+    model.add(Dense(1, activation=act_out))
+
+    # Compile model
+    optimizer = Adam(learnr)
+
+    model.compile(loss='mse',optimizer=optimizer,metrics=['mae', 'mse'])
+
+    return model
+
 model = KerasRegressor(build_fn=create_model)
 grid_search = GridSearchCV(estimator=model, param_grid=param_grid, scoring='neg_mean_squared_error', n_jobs=-1)
-grid_search.fit(train_x, train_y)
+grid_search.fit(normed_train_dataset, train_labels)
 
 best_params = grid_search.best_params_
 best_score = grid_search.best_score_
 
-best_model = create_model(**best_params)
-best_model.fit(train_x, train_y, epochs=50, batch_size=64)
-test_loss = best_model.evaluate(test_x, test_y)
+print(best_params)
