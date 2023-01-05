@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt  # for creating plots and charts
 import numpy as np  # for numerical computing with Python
 import pandas as pd  # for data manipulation and analysis
 import pathlib  # for interacting with file paths in a cross-platform manner
-import seaborn as sns  # for statistical data visualization
 import tensorflow as tf  # for machine learning and deep learning
 from keras.layers import Dense, Activation  # for building deep learning models in TensorFlow
 from keras.models import Sequential  # for building deep learning models in TensorFlow
@@ -72,21 +71,19 @@ print(train_labels)
 param_grid = {
     'camadas': [1, 2, 3, 4],
     'neuronios': [16, 32, 64, 128],
-    'learnr': [1e-3, 1e-4, 1e-5],
     'act_h': ['relu', 'tanh'],
-    'act_out': ['linear', 'sigmoid']
 }
 
-def create_model(camadas, neuronios, learnr, act_h,act_out):
+def create_model(camadas, neuronios, act_h):
     # Set up model
     model = Sequential()
     model.add(Dense(neuronios, input_dim=8, activation=act_h))
     for i in range(camadas):
         model.add(Dense(neuronios,activation=act_h))
-    model.add(Dense(1, activation=act_out))
+    model.add(Dense(1, activation='sigmoid'))
 
     # Compile model
-    optimizer = Adam(learnr)
+    optimizer = Adam(0.001)
 
     model.compile(loss='mse',optimizer=optimizer,metrics=['mae', 'mse'])
 
