@@ -1,5 +1,6 @@
 import torch
 from sklearn.model_selection import train_test_split
+
 from dataset import BitcoinRegressionDataset
 from dataset import BitcoinRegressionDataset_train
 from network import network
