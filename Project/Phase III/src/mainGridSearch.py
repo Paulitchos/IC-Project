@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV  # for model 
 from sklearn.preprocessing import MinMaxScaler  # for preprocessing data
 from tensorflow import keras  # for building deep learning models in TensorFlow
 from tensorflow.keras import layers  # for building deep learning models in TensorFlow
-from keras.wrappers.scikit_learn import KerasRegressor
+from sklearn.neural_network import MLPRegressor
 
 # Print TensorFlow version
 print(tf.__version__)
@@ -68,32 +68,49 @@ print(train_labels.shape)
 
 print(train_labels)
 
-param_grid = {
-    'camadas': [1, 2, 3, 4],
-    'neuronios': [16, 32, 64, 128],
-    'act_h': ['relu', 'tanh'],
+parameters = {
+    'hidden_layer_sizes': [(128,), (32,), (32,32), (128,128)],
+    'activation': ['tanh','relu','softmax'],
+    'learning_rate': ['constant', 'adaptive']
 }
 
-def create_model(camadas, neuronios, act_h):
-    # Set up model
-    model = Sequential()
-    model.add(Dense(neuronios, input_dim=8, activation=act_h))
-    for i in range(camadas):
-        model.add(Dense(neuronios,activation=act_h))
-    model.add(Dense(1, activation='sigmoid'))
+gs = GridSearchCV(MLPRegressor(solver='adam'),param_grid=parameters,scoring="neg_mean_squared_error",n_jobs=-1,cv=5)
+gs.fit(normed_train_dataset,train_labels)
 
-    # Compile model
-    optimizer = Adam(0.001)
+print("GridSearch:\n")
+print("Best estimator:",gs.best_estimator_)
+print("Best parameters:",gs.best_params_)
+print("Score:",gs.best_score_)
 
-    model.compile(loss='mse',optimizer=optimizer,metrics=['mae', 'mse'])
+def objective(x):
+    print(x)
+    neuronios, act_h = x
+    model = keras.Sequential([
+        layers.Dense(neuronios, activation=act_h, input_shape=[8]),
+        layers.Dense(neuronios, activation=act_h),
+        layers.Dense(1,activation="sigmoid")
+    ])
 
-    return model
+    # Compile the model
+    model.compile(loss='mean_squared_error', optimizer='adam')
+    # Train the model on the training data and labels
+    model.fit(normed_train_dataset, train_labels, epochs=30)
+    # Evaluate the model on the test data and labels
+    score = model.evaluate(normed_test_dataset, test_labels, verbose=0)
+    # Return the negative score as the objective function to minimize
+   
+    return -score
+    
+# Get the best hyperparameters from grid search
+best_params = gs.best_params_
 
-model = KerasRegressor(build_fn=create_model)
-grid_search = GridSearchCV(estimator=model, param_grid=param_grid, scoring='neg_mean_squared_error', n_jobs=-1)
-grid_search.fit(normed_train_dataset, train_labels)
+options = {'c1': 0.5, 'c2': 0.3, 'w':1.5}
 
-best_params = grid_search.best_params_
-best_score = grid_search.best_score_
+optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=2, options=options)
 
-print(best_params)
+neuronios = best_params['hidden_layer_sizes'][0]
+act_h = best_params['activation']
+
+
+xopt = optimizer.optimize(objective,iters=100)
+

@@ -87,6 +87,7 @@ plt.show()
 #c3 - inertica parameter
 options = {'c1': 0.5, 'c2': 0.5, 'w':0.2}
 
+
 # ================================================================== ACKLEY -> Dim = 2 ================================================================== #
 # Call instance of PSO
 optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=2, options=options)#A dimensao não é definida por nós, é a dimensao do problema
