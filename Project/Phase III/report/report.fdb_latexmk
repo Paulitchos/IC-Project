@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex report"] 1673226210 "report.aux" "report.bbl" "report" 1673226212
+["bibtex report"] 1673283777 "report.aux" "report.bbl" "report" 1673283779
   "/opt/texlive/2022/texmf-dist/bibtex/bst/base/ieeetr.bst" 1664590314 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "refs.bib" 0 -1 0 ""
-  "report.aux" 1673226211 9211 631927c987b709a9d2a99f2404baa07d "pdflatex"
+  "report.aux" 1673283779 10165 b6a86085930fe2c1220bcae115248cfc "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
-["pdflatex"] 1673226210 "/home/paulitchos/Documents/IC-Project/Project/Phase III/report/report.tex" "report.pdf" "report" 1673226212
-  "/home/paulitchos/Documents/IC-Project/Project/Phase III/report/report.tex" 1673226207 20406 60572aa1607a74b6ef309a3027255e16 ""
+["pdflatex"] 1673283777 "/home/paulitchos/Documents/IC-Project/Project/Phase III/report/report.tex" "report.pdf" "report" 1673283779
+  "/home/paulitchos/Documents/IC-Project/Project/Phase III/report/report.tex" 1673283776 22056 6187d15d84c7fa97ff1eae30f59425cc ""
   "/opt/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1664590314 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1664590314 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1664590314 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -178,6 +178,7 @@
   "/opt/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1664590314 4595804 11fe22e8d6c953cbd46eceb3b756c4b3 ""
   "/opt/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1664590314 3059301 8123a625455839dc7cfebd165162d8d1 ""
   "/opt/texlive/2022/texmf.cnf" 1664590314 585 9e8504408f25e5ac7fa614e58817b8d1 ""
+  "img/Diagrama.png" 1673280848 61611 cfec775ffd505f1c2c6ea1f41c0f52ac ""
   "img/cnn_ativacao.png" 1673211028 14138 a6fa700df8b0f982b15d7db357d86596 ""
   "img/cnn_default.png" 1673210962 14190 8c4d42ddf284485bd66b097ab399b8ea ""
   "img/cnn_lr.png" 1673212025 16517 9e1e814f81bdb72339694ab4dc99f021 ""
@@ -188,10 +189,11 @@
   "img/deep_lr.png" 1673206685 24232 f9c57f35856f6f6a520a2379202e58fe ""
   "img/grid.png" 1673220578 14604 4c36a9432da5e4f11f677404e4d0519c ""
   "img/logo-isec-transparente.png" 1672757526 25982 96cb64a35425ffa9550d70cb085da311 ""
-  "report.aux" 1673226211 9211 631927c987b709a9d2a99f2404baa07d "pdflatex"
-  "report.bbl" 1673226210 49 0eba253fc001332e731e8aba3f23127b "bibtex report"
-  "report.tex" 1673226207 20406 60572aa1607a74b6ef309a3027255e16 ""
-  "report.toc" 1673226211 1235 b853f173077dcec5ff7c18992aab3d0e "pdflatex"
+  "img/pso.png" 1673281958 10458 4366b3c625acde6d1f713cb11f2b1bd9 ""
+  "report.aux" 1673283779 10165 b6a86085930fe2c1220bcae115248cfc "pdflatex"
+  "report.bbl" 1673283777 49 0eba253fc001332e731e8aba3f23127b "bibtex report"
+  "report.tex" 1673283776 22056 6187d15d84c7fa97ff1eae30f59425cc ""
+  "report.toc" 1673283779 1442 21309945688a8b778b7308c6d2a6d65a "pdflatex"
   (generated)
   "report.aux"
   "report.log"

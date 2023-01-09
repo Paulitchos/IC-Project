@@ -218,8 +218,31 @@ iterações (iters) usando a função "optimize", com o objetivo de minimizar a
 função "f". No final, são retornados os parâmetros ótimos (xopt) e o valor 
 mínimo da função (fopt).
 
-\section{Implementação dos Algoritmo}\label{sec:imp-al}
+\section{Diagrama}
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/Diagrama.png}
 
+\section{Implementação dos Algoritmo}\label{sec:imp-al}
+\subsection{Manual}
+O código configura um modelo de rede neural utilizando a biblioteca Keras. 
+O modelo é do tipo sequencial, ou seja, é uma pilha linear de camadas. Ele é 
+composto por uma camada Conv1D, seguida por uma camada MaxPooling1D, 
+uma camada Flatten e uma camada Dense. A camada Conv1D aplica uma convolação 
+1D nos dados de entrada, com tamanho de kernel 3. A camada MaxPooling1D 
+aplica um max pooling com tamanho de pool 2. A camada Flatten aplana a saída 
+da camada anterior num array 1D e a camada Dense tem uma única unidade de saída 
+e usa a função de ativação act\_out.
+
+Também pode ser configurado como uma sequência de camadas Dense, cada 
+uma com um número de neurônios especificado e usando a função de ativação act\_h.
+A primeira camada tem uma forma de entrada de [8], o que significa que ela 
+espera receber 8 features de entrada. A última camada tem uma única unidade 
+de saída e usa a função de ativação act\_out.
+
+O modelo é compilado com o otimizador Adam e a função de perda MSE 
+(erro quadrático médio). Ele também irá acompanhar o erro absoluto médio 
+(MAE) e o MSE como métricas durante o treino.
+
+\subsection{PSO}
 O algoritmo de Otimização por Enxame de Partículas 
 (Particle Swarm Optimization, PSO) é uma técnica de otimização baseada em 
 metaheurísticas que imita o comportamento de um enxame de partículas em 
@@ -351,7 +374,6 @@ densas para a classificação ou a predição final.
 Iniciamos a análise dos resultados obtidos com as redes CNN 1D do Keras, 
 onde os parâmetros eram ajustados manualmente após cada teste.
 
-\newpage
 Como rede base para comparação temos:
 
 \begin{figure}[htb]
@@ -384,6 +406,7 @@ Proxímo parametro a ser alterado é o learning rate, é um parâmetro utilizado
 em algoritmos de aprendizado de máquina que determina a velocidade com que 
 os pesos da rede são atualizados durante o treinamento.
 
+
 \begin{figure}[htb]
   \centering
   \includegraphics[width=\linewidth]{img/cnn_lr.png}
@@ -394,7 +417,6 @@ os pesos da rede são atualizados durante o treinamento.
 Neste caso, observamos que a rede de convolução 1D se beneficiou de um 
 learning rate mais alto, o que significa que ajudou a convergir mais 
 rapidamente para a solução ótima durante o ajuste dos pesos.
-
 \newpage
 Por último variamos as funções de ativação da rede, algumas funções de 
 ativação podem ser mais adequadas para certos tipos de problemas ou dados, 
@@ -467,10 +489,21 @@ espaço de busca e fornecendo um dicionário de opções para o PSO:
   \label{fig:code_2}
 \end{figure}
 
+
 Em seguida, utilizamos as funções criadas para otimizar os hiperparâmetros e obtivemos 
 a seguinte configuração:
 
-\newpage
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=\linewidth]{img/pso.png}
+  \caption{Melhor rede do PSO}
+  \label{fig:pso}
+\end{figure}
+
+O mesmo se verifica no PSO, mas pela mesma razão foram efetuadas poucas épocas, pois os testes
+eram pesados, e a configuração pode não esta correta, pois não conseguimos extrair 
+os parâmetro usados.
+
 \section{Conclusão}\label{sec:conc}
 
 Neste trabalho, aprendemos sobre o que são redes densas e redes de convulsão, 
@@ -490,7 +523,7 @@ hiperparâmetros, tudo depende do hardware disponível e do objetivo do problema
 \section{Referências}\label{sec:sup-inf-utl}
 \bibliographystyle{ieeetr}
 \bibliography{refs}
-
+Código das aulas.
 
 %===========================================================
 
