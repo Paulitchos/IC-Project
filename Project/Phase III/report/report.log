@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.1)  7 JAN 2023 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.1)  9 JAN 2023 01:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1035,20 +1035,89 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.145 
-       [1] (./report.bbl) [2] (./report.aux) ) 
+       [1]
+Overfull \hbox (55.03726pt too wide) in paragraph at lines 189--194
+[]\OT1/cmr/m/n/12 Por fim, o m^^Setodo 'fit' ^^Se us-ado para treinar o mod-elo com o con-junto de treino 'normed[]train[]dataset'
+ []
+
+[2] [3]
+Overfull \hbox (10.57079pt too wide) in paragraph at lines 266--268
+[]\OT1/cmr/m/n/12 Iniciamos a an^^Salise dos re-sul-ta-dos obti-dos com as re-des den-sas do Keras, onde os par^ametros
+ []
+
+<img/deep_default.png, id=65, 564.04477pt x 69.49039pt>
+File: img/deep_default.png Graphic file (type png)
+<use img/deep_default.png>
+Package pdftex.def Info: img/deep_default.png  used on input line 273.
+(pdftex.def)             Requested size: 469.75502pt x 57.8742pt.
+[4 <./img/deep_default.png (PNG copy)>]
+<img/deep_camadas_neuronios.png, id=71, 564.04477pt x 190.12569pt>
+File: img/deep_camadas_neuronios.png Graphic file (type png)
+<use img/deep_camadas_neuronios.png>
+Package pdftex.def Info: img/deep_camadas_neuronios.png  used on input line 287.
+(pdftex.def)             Requested size: 469.75502pt x 158.34387pt.
+<img/deep_lr.png, id=72, 564.60938pt x 187.34607pt>
+File: img/deep_lr.png Graphic file (type png)
+<use img/deep_lr.png>
+Package pdftex.def Info: img/deep_lr.png  used on input line 306.
+(pdftex.def)             Requested size: 469.75502pt x 155.87454pt.
+ [5 <./img/deep_camadas_neuronios.png (PNG copy)> <./img/deep_lr.png (PNG copy)>]
+<img/deep_ativacao.png, id=80, 564.04477pt x 100.62207pt>
+File: img/deep_ativacao.png Graphic file (type png)
+<use img/deep_ativacao.png>
+Package pdftex.def Info: img/deep_ativacao.png  used on input line 325.
+(pdftex.def)             Requested size: 469.75502pt x 83.80186pt.
+ [6 <./img/deep_ativacao.png (PNG copy)>]
+<img/cnn_default.png, id=86, 564.04477pt x 72.27pt>
+File: img/cnn_default.png Graphic file (type png)
+<use img/cnn_default.png>
+Package pdftex.def Info: img/cnn_default.png  used on input line 359.
+(pdftex.def)             Requested size: 469.75502pt x 60.18918pt.
+<img/cnn_neuronios.png, id=87, 564.04477pt x 70.60223pt>
+File: img/cnn_neuronios.png Graphic file (type png)
+<use img/cnn_neuronios.png>
+Package pdftex.def Info: img/cnn_neuronios.png  used on input line 370.
+(pdftex.def)             Requested size: 469.75502pt x 58.8002pt.
+<img/cnn_lr.png, id=88, 564.04477pt x 130.64192pt>
+File: img/cnn_lr.png Graphic file (type png)
+<use img/cnn_lr.png>
+Package pdftex.def Info: img/cnn_lr.png  used on input line 389.
+(pdftex.def)             Requested size: 469.75502pt x 108.80353pt.
+ [7 <./img/cnn_default.png (PNG copy)> <./img/cnn_neuronios.png (PNG copy)> <./img/cnn_lr.png (PNG copy)>]
+<img/cnn_ativacao.png, id=96, 565.17398pt x 101.73392pt>
+File: img/cnn_ativacao.png Graphic file (type png)
+<use img/cnn_ativacao.png>
+Package pdftex.def Info: img/cnn_ativacao.png  used on input line 405.
+(pdftex.def)             Requested size: 469.75502pt x 84.5602pt.
+ [8 <./img/cnn_ativacao.png (PNG copy)>]
+<img/grid.png, id=104, 632.92711pt x 71.71408pt>
+File: img/grid.png Graphic file (type png)
+<use img/grid.png>
+Package pdftex.def Info: img/grid.png  used on input line 442.
+(pdftex.def)             Requested size: 469.75502pt x 53.22734pt.
+
+Overfull \hbox (49.99045pt too wide) in paragraph at lines 465--465
+[]    \OT1/cmtt/m/n/10 optimizer = ps.single.GlobalBestPSO(n_particles=5, dimensions=2, options=options,bounds=bounds)[] 
+ []
+
+[9 <./img/grid.png (PNG copy)>] (./report.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [10] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 24742 strings out of 475071
- 479670 string characters out of 5751471
- 860206 words of memory out of 5000000
- 45702 multiletter control sequences out of 15000+600000
- 471837 words of font info for 37 fonts, out of 8000000 for 9000
+ 24864 strings out of 475071
+ 481729 string characters out of 5751471
+ 862844 words of memory out of 5000000
+ 45786 multiletter control sequences out of 15000+600000
+ 472511 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,5n,91p,585b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on report.pdf (4 pages, 83138 bytes).
+ 86i,6n,91p,593b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/opt/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></opt/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on report.pdf (12 pages, 277990 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

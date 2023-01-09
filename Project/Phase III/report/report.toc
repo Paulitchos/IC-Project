@@ -3,5 +3,14 @@
 \contentsline {section}{\numberline {2}Descrição das Metodologias}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Metodologias Comum em ambas as fases}{1}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Metodologias Manual}{1}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Metodologias GridSearch}{2}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Referências}{2}{section.3}%
+\contentsline {subsection}{\numberline {2.3}Metodologia GridSearch}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Metodologia Pso}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Implementação dos Algoritmo}{3}{section.3}%
+\contentsline {section}{\numberline {4}Análise dos Resultados}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Parte Manual}{4}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Deep Network}{4}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}CNN 1D}{6}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}GridSearch}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}PSO}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusão}{10}{section.5}%
+\contentsline {section}{\numberline {6}Referências}{10}{section.6}%

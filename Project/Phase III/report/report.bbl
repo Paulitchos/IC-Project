@@ -1,15 +1,3 @@
-\begin{thebibliography}{1}
-
-\bibitem{FirePso}
-
-\newblock
-  \href{https://www.mecs-press.org/ijisa/ijisa-v4-n10/IJISA-V4-N10-6.pdf}{Firefly
-  vs PSO}.
-
-\bibitem{Firefly_par}
-
-\newblock
-  \href{https://github.com/SISDevelop/SwarmPackagePy/blob/master/README.md#firefly-algorithm}{Firefly
-  parametros}.
+\begin{thebibliography}{}
 
 \end{thebibliography}
