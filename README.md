@@ -1,6 +1,6 @@
 # IC-Project
 
-Done in the context of the Computational intelligence module in our university
+Done in the context of the Computational Intelligence module in our university
 
 ### Phases: 
 
